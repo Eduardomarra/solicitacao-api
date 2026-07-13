@@ -21,15 +21,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
-@Tag(name = "Autenticação", description = "Endpoints de autenticação e registro")
+@Tag(name = "Authentication", description = "Authentication and registration endpoints")
 public class AuthController {
 
     private final AuthService authService;
 
     @PostMapping("/register")
-    @Operation(summary = "Registrar novo usuário (CLIENT)")
-    @ApiResponse(responseCode = "201", description = "Usuário registrado com sucesso")
-    @ApiResponse(responseCode = "400", description = "Dados inválidos")
+    @Operation(summary = "Register new user (CLIENT)")
+    @ApiResponse(responseCode = "201", description = "User registered successfully")
+    @ApiResponse(responseCode = "400", description = "Invalid data")
     public ResponseEntity<AuthResponse> register(@Valid @RequestBody RegisterRequest request) {
         AuthResponse response = authService.register(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
@@ -37,8 +37,8 @@ public class AuthController {
 
     @PostMapping("/login")
     @Operation(summary = "Login")
-    @ApiResponse(responseCode = "200", description = "Login realizado com sucesso")
-    @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
+    @ApiResponse(responseCode = "200", description = "Login successful")
+    @ApiResponse(responseCode = "401", description = "Invalid credentials")
     public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
         AuthResponse response = authService.login(request);
         return ResponseEntity.ok(response);
@@ -46,9 +46,9 @@ public class AuthController {
 
     @PostMapping("/admin/users")
     @PreAuthorize("hasRole('ADMIN')")
-    @Operation(summary = "Criar usuário (ANALYST ou ADMIN) - Somente ADMIN")
-    @ApiResponse(responseCode = "201", description = "Usuário criado com sucesso")
-    @ApiResponse(responseCode = "403", description = "Acesso negado")
+    @Operation(summary = "Create user (ANALYST or ADMIN) - Admin only")
+    @ApiResponse(responseCode = "201", description = "User created successfully")
+    @ApiResponse(responseCode = "403", description = "Access denied")
     public ResponseEntity<AuthResponse> createUser(@Valid @RequestBody CreateUserRequest request) {
         AuthResponse response = authService.createUser(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);

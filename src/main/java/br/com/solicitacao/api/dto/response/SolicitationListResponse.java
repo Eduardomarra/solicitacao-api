@@ -8,8 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -17,37 +15,17 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SolicitationResponse {
+public class SolicitationListResponse {
     private UUID id;
     private UUID clientId;
+    private String clientName;
     private SolicitationStatus status;
     private Integer currentStep;
-
-    // Step 1 - Dados básicos
     private ServiceType serviceType;
     private String title;
-    private String description;
-
-    // Step 2 - Endereço
-    private String cep;
-    private String number;
-    private String complement;
-    private String street;
-    private String neighborhood;
     private String city;
     private String state;
-
-    // Step 3 - Confirmação
     private Priority priority;
-    private LocalDate preferredDate;
-    private BigDecimal estimatedValue;
-    private Boolean termsAccepted;
-
-    // Auditoria
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
     private LocalDateTime submittedAt;
-    private LocalDateTime analyzedAt;
-    private UUID analyzedBy;
-    private String analysisComment;
 }

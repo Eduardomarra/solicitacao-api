@@ -30,18 +30,22 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        // Endpoints públicos
                         .requestMatchers(
                                 "/auth/**",
                                 "/test/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
                                 "/v3/api-docs/**",
-                                "/h2-console/**",
-                                "/actuator/**"
+                                "/h2-console/**",      // 🔓 Libera H2
+                                "/actuator/**"         // 🔓 Libera Actuator
                         ).permitAll()
-                        // Qualquer outra requisição precisa de autenticação
                         .anyRequest().authenticated()
+                )
+                // ============================================
+                // PERMITIR FRAMES PARA H2 CONSOLE
+                // ============================================
+                .headers(headers -> headers
+                        .frameOptions(frameOptions -> frameOptions.sameOrigin())  // Permite frames da mesma origem
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

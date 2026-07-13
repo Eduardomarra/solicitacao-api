@@ -25,7 +25,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/solicitations")
 @RequiredArgsConstructor
-@Tag(name = "Solicitações", description = "Endpoints para gerenciamento de solicitações")
+@Tag(name = "Solicitations", description = "Endpoints for solicitation management")
 @SecurityRequirement(name = "bearerAuth")
 public class SolicitationController {
 
@@ -33,8 +33,8 @@ public class SolicitationController {
     private final UserRepository userRepository;
 
     @PostMapping
-    @Operation(summary = "Criar nova solicitação (rascunho)")
-    @ApiResponse(responseCode = "201", description = "Solicitação criada com sucesso")
+    @Operation(summary = "Create new solicitation (draft)")
+    @ApiResponse(responseCode = "201", description = "Solicitation created successfully")
     public ResponseEntity<SolicitationResponse> create() {
         UUID clientId = getCurrentUserId();
         SolicitationEntity entity = solicitationService.create(clientId);
@@ -42,9 +42,9 @@ public class SolicitationController {
     }
 
     @PutMapping("/{id}/step1")
-    @Operation(summary = "Salvar Step 1 - Dados básicos")
-    @ApiResponse(responseCode = "200", description = "Step 1 salvo com sucesso")
-    @ApiResponse(responseCode = "404", description = "Solicitação não encontrada")
+    @Operation(summary = "Save Step 1 - Basic data")
+    @ApiResponse(responseCode = "200", description = "Step 1 saved successfully")
+    @ApiResponse(responseCode = "404", description = "Solicitation not found")
     public ResponseEntity<SolicitationResponse> saveStep1(
             @PathVariable UUID id,
             @Valid @RequestBody SolicitationStep1Request request) {
@@ -54,10 +54,9 @@ public class SolicitationController {
     }
 
     @PutMapping("/{id}/step2")
-    @Operation(summary = "Salvar Step 2 - Endereço (com integração ViaCEP)")
-    @ApiResponse(responseCode = "200", description = "Step 2 salvo com sucesso")
-    @ApiResponse(responseCode = "400", description = "CEP inválido ou não encontrado")
-    @ApiResponse(responseCode = "404", description = "Solicitação não encontrada")
+    @Operation(summary = "Save Step 2 - Address (with ViaCEP integration)")
+    @ApiResponse(responseCode = "200", description = "Step 2 saved successfully")
+    @ApiResponse(responseCode = "400", description = "Invalid CEP or not found")
     public ResponseEntity<SolicitationResponse> saveStep2(
             @PathVariable UUID id,
             @Valid @RequestBody SolicitationStep2Request request) {
@@ -67,10 +66,9 @@ public class SolicitationController {
     }
 
     @PutMapping("/{id}/step3")
-    @Operation(summary = "Salvar Step 3 - Confirmação")
-    @ApiResponse(responseCode = "200", description = "Step 3 salvo com sucesso")
-    @ApiResponse(responseCode = "400", description = "Erro de validação (ex: HIGH priority com valor < 100)")
-    @ApiResponse(responseCode = "404", description = "Solicitação não encontrada")
+    @Operation(summary = "Save Step 3 - Confirmation")
+    @ApiResponse(responseCode = "200", description = "Step 3 saved successfully")
+    @ApiResponse(responseCode = "400", description = "Validation error (e.g., HIGH priority with value < 100)")
     public ResponseEntity<SolicitationResponse> saveStep3(
             @PathVariable UUID id,
             @Valid @RequestBody SolicitationStep3Request request) {
@@ -80,10 +78,9 @@ public class SolicitationController {
     }
 
     @PostMapping("/{id}/submit")
-    @Operation(summary = "Enviar solicitação para análise")
-    @ApiResponse(responseCode = "200", description = "Solicitação enviada com sucesso")
-    @ApiResponse(responseCode = "400", description = "Solicitação incompleta")
-    @ApiResponse(responseCode = "404", description = "Solicitação não encontrada")
+    @Operation(summary = "Submit solicitation for analysis")
+    @ApiResponse(responseCode = "200", description = "Solicitation submitted successfully")
+    @ApiResponse(responseCode = "400", description = "Incomplete solicitation")
     public ResponseEntity<SolicitationResponse> submit(@PathVariable UUID id) {
         UUID clientId = getCurrentUserId();
         SolicitationEntity entity = solicitationService.submit(id, clientId);
@@ -91,9 +88,9 @@ public class SolicitationController {
     }
 
     @GetMapping("/{id}")
-    @Operation(summary = "Buscar solicitação por ID")
-    @ApiResponse(responseCode = "200", description = "Solicitação encontrada")
-    @ApiResponse(responseCode = "404", description = "Solicitação não encontrada")
+    @Operation(summary = "Get solicitation by ID")
+    @ApiResponse(responseCode = "200", description = "Solicitation found")
+    @ApiResponse(responseCode = "404", description = "Solicitation not found")
     public ResponseEntity<SolicitationResponse> findById(@PathVariable UUID id) {
         UUID clientId = getCurrentUserId();
         SolicitationEntity entity = solicitationService.findByIdAndClientId(id, clientId);
@@ -103,10 +100,9 @@ public class SolicitationController {
     private UUID getCurrentUserId() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String email = authentication.getName();
-
         return userRepository.findByEmail(email)
                 .map(UserEntity::getId)
-                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
     private SolicitationResponse toResponse(SolicitationEntity entity) {

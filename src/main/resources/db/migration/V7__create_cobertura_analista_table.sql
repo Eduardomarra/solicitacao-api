@@ -1,12 +1,15 @@
 -- -- Tabela de cobertura do analista
--- CREATE TABLE IF NOT EXISTS analyst_coverage (
---                                                 id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
---     user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
---     state VARCHAR(2) NOT NULL,
---     UNIQUE(user_id, state)
+-- CREATE TABLE IF NOT EXISTS cobertura_analista (
+--     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--     usuario_id UUID NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+--     uf VARCHAR(2) NOT NULL,
+--     UNIQUE(usuario_id, uf)
 --     );
 --
--- CREATE INDEX idx_analyst_coverage_user_id ON analyst_coverage(user_id);
+-- -- Índice para performance
+-- CREATE INDEX idx_cobertura_analista_usuario_id ON cobertura_analista(usuario_id);
+
+
 
 -- Tabela de cobertura do analista (H2 compatible)
 CREATE TABLE IF NOT EXISTS analyst_coverage (
@@ -17,4 +20,5 @@ CREATE TABLE IF NOT EXISTS analyst_coverage (
     UNIQUE(user_id, state)
     );
 
+-- Índice para performance
 CREATE INDEX IF NOT EXISTS idx_analyst_coverage_user_id ON analyst_coverage(user_id);

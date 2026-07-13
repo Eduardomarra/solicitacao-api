@@ -1,0 +1,133 @@
+2026-07-09 22:34:03.559 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 17348 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-09 22:34:03.560 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-09 22:34:03.560 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-09 22:34:03.832 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-09 22:34:03.833 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-09 22:34:03.849 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2026-07-09 22:34:03.850 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-09 22:34:03.850 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-09 22:34:03.851 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Elasticsearch repository interfaces.
+2026-07-09 22:34:04.053 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=081f5988-e59d-3d97-ba2f-4403f1197ea3
+2026-07-09 22:34:04.214 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-09 22:34:04.216 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-09 22:34:04.216 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-09 22:34:04.255 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-09 22:34:04.255 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 693 ms
+2026-07-09 22:34:04.331 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-07-09 22:34:04.332 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn21: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-09 22:34:04.332 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-07-09 22:34:04.332 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-09 22:34:04.428 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-09 22:34:04.431 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-09 22:34:04.435 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-09 22:34:04.436 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-09 22:34:04.491 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-09 22:34:04.491 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-09 22:34:04.491 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-09 22:34:04.491 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-09 22:34:04.492 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-09 22:34:04.492 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-09 22:34:04.493 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-09 22:34:04.495 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09 22:34:04.626 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-09 22:34:04.763 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'solicitationController': Resolution of declared constructors on bean Class [br.com.solicitacao.api.controller.SolicitationController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@39be9c21] failed
+2026-07-09 22:34:04.763 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-09 22:34:04.763 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-09 22:34:04.764 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-09 22:34:04.764 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-09 22:34:04.765 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-09 22:34:04.765 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-07-09 22:34:04.765 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-07-09 22:34:04.766 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-09 22:34:04.774 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-09 22:34:04.777 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'solicitationController': Resolution of declared constructors on bean Class [br.com.solicitacao.api.controller.SolicitationController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@39be9c21] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1190)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: br/com/solicitacao/core/service/SolicitationService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3551)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2729)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:363)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: br.com.solicitacao.core.service.SolicitationService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:536)
+	at java.base/java.lang.Class.forName(Class.java:515)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 25 common frames omitted
