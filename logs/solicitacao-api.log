@@ -8185,3 +8185,1250 @@ Unconditional classes:
 2026-07-11 18:20:13.359 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2026-07-11 18:20:13.360 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-07-11 18:20:13.362 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-13 18:02:25.741 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-13 18:02:25.788 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 29264 (C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-13 18:02:25.789 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-13 18:02:25.789 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-13 18:02:25.845 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-13 18:02:25.845 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-13 18:02:26.791 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:02:26.791 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 18:02:26.855 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2026-07-13 18:02:26.856 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:02:26.856 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:02:26.857 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 Elasticsearch repository interfaces.
+2026-07-13 18:02:27.517 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3dd23b8b-4f23-30a5-906f-c036aa9c4c94
+2026-07-13 18:02:28.448 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-13 18:02:28.457 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-13 18:02:28.459 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-13 18:02:28.459 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-13 18:02:28.543 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-13 18:02:28.544 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2697 ms
+2026-07-13 18:02:28.705 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-13 18:02:28.919 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-13 18:02:28.921 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-13 18:02:28.931 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-13 18:02:29.134 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2026-07-13 18:02:29.134 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-07-13 18:02:29.134 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - 
+2026-07-13 18:02:29.175 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:mem:solicitacao_db (H2 2.2)
+2026-07-13 18:02:29.180 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-07-13 18:02:29.196 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-07-13 18:02:29.251 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+2026-07-13 18:02:29.257 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1 - create users table"
+2026-07-13 18:02:29.268 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "2 - create analyst coverage table"
+2026-07-13 18:02:29.277 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "3 - create solicitations table"
+2026-07-13 18:02:29.285 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "4 - create audit logs table"
+2026-07-13 18:02:29.293 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "5 - insert admin user"
+2026-07-13 18:02:29.305 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "6 - create solicitations table"
+2026-07-13 18:02:29.311 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "7 - create cobertura analista table"
+2026-07-13 18:02:29.316 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "8 - insert test data"
+2026-07-13 18:02:29.324 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "9 - create audit logs table"
+2026-07-13 18:02:29.330 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 9 migrations to schema "PUBLIC", now at version v9 (execution time 00:00.025s)
+2026-07-13 18:02:29.439 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-13 18:02:29.517 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-13 18:02:29.559 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-13 18:02:29.814 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 18:02:29.867 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 18:02:30.739 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 18:02:30.763 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:02:31.183 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-13 18:02:31.621 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 18:02:31.682 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-13 18:02:32.414 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+2026-07-13 18:02:32.508 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15f896f0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c9d307e, org.springframework.security.web.context.SecurityContextHolderFilter@55734c3, org.springframework.security.web.header.HeaderWriterFilter@57aad3e0, org.springframework.web.filter.CorsFilter@a6333e, org.springframework.security.web.authentication.logout.LogoutFilter@7c2a7e07, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@39329424, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59681c33, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73ad77b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b10cc03, org.springframework.security.web.session.SessionManagementFilter@3893c597, org.springframework.security.web.access.ExceptionTranslationFilter@7aea42a3, org.springframework.security.web.access.intercept.AuthorizationFilter@29d4df17]
+2026-07-13 18:02:33.811 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-13 18:02:33.825 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-07-13 18:02:33.839 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Started SolicitacaoApplication in 8.623 seconds (process running for 9.462)
+2026-07-13 18:03:43.315 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-07-13 18:03:43.328 [http-nio-8080-exec-4] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/h2-console' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-13 18:03:43.354 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:43.360 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-07-13 18:03:43.370 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/
+2026-07-13 18:03:43.375 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:43.375 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/
+2026-07-13 18:03:43.458 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:03:43.463 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:43.464 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:03:43.543 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/login.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:03:43.550 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:43.552 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/login.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:03:43.667 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/background.gif
+2026-07-13 18:03:43.669 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:43.669 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/background.gif
+2026-07-13 18:03:46.163 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/login.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:03:46.170 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:46.170 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/login.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:03:57.126 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/login.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:03:57.130 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:57.132 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/login.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:03:57.214 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:03:57.216 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:57.217 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:03:57.297 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/background.gif
+2026-07-13 18:03:57.302 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:03:57.302 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/background.gif
+2026-07-13 18:04:33.064 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/login.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.066 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.068 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/login.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.576 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/header.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.576 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:04:33.580 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tables.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.585 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.585 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.586 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tables.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.586 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:04:33.589 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/help.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.595 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.595 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/query.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.621 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.631 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/query.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.724 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.744 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/help.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.744 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/header.jsp?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:04:33.853 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_disconnect.gif
+2026-07-13 18:04:33.854 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_line.gif
+2026-07-13 18:04:33.862 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_refresh.gif
+2026-07-13 18:04:33.896 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.896 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.897 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_disconnect.gif
+2026-07-13 18:04:33.897 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_line.gif
+2026-07-13 18:04:33.898 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.900 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_refresh.gif
+2026-07-13 18:04:33.983 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_commit.gif
+2026-07-13 18:04:33.987 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:33.992 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_commit.gif
+2026-07-13 18:04:34.093 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_run.gif
+2026-07-13 18:04:34.232 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.250 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_run.gif
+2026-07-13 18:04:34.267 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_stop.gif
+2026-07-13 18:04:34.268 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_run_selected.gif
+2026-07-13 18:04:34.268 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_history.gif
+2026-07-13 18:04:34.275 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.276 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_history.gif
+2026-07-13 18:04:34.289 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_help.gif
+2026-07-13 18:04:34.288 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.300 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.301 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.302 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_stop.gif
+2026-07-13 18:04:34.311 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_help.gif
+2026-07-13 18:04:34.314 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_run_selected.gif
+2026-07-13 18:04:34.332 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_rollback.gif
+2026-07-13 18:04:34.340 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.344 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_rollback.gif
+2026-07-13 18:04:34.708 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree.js
+2026-07-13 18:04:34.709 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.715 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree.js
+2026-07-13 18:04:34.759 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_minus.gif
+2026-07-13 18:04:34.761 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.761 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_database.gif
+2026-07-13 18:04:34.762 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_minus.gif
+2026-07-13 18:04:34.770 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_plus.gif
+2026-07-13 18:04:34.775 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_column.gif
+2026-07-13 18:04:34.765 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.778 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_database.gif
+2026-07-13 18:04:34.780 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_empty.gif
+2026-07-13 18:04:34.782 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.781 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_table.gif
+2026-07-13 18:04:34.783 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_plus.gif
+2026-07-13 18:04:34.785 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.788 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_column.gif
+2026-07-13 18:04:34.822 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.823 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_table.gif
+2026-07-13 18:04:34.825 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.832 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_folder.gif
+2026-07-13 18:04:34.836 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.839 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_empty.gif
+2026-07-13 18:04:34.842 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_users.gif
+2026-07-13 18:04:34.843 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_info.gif
+2026-07-13 18:04:34.843 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.844 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.844 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_users.gif
+2026-07-13 18:04:34.848 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_folder.gif
+2026-07-13 18:04:34.851 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_info.gif
+2026-07-13 18:04:34.876 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_type.gif
+2026-07-13 18:04:34.877 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.883 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_type.gif
+2026-07-13 18:04:34.897 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_index_az.gif
+2026-07-13 18:04:34.898 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_index.gif
+2026-07-13 18:04:34.899 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.900 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_index.gif
+2026-07-13 18:04:34.904 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.908 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_view.gif
+2026-07-13 18:04:34.909 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.911 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_user.gif
+2026-07-13 18:04:34.912 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_view.gif
+2026-07-13 18:04:34.914 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_index_az.gif
+2026-07-13 18:04:34.915 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:04:34.916 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_user.gif
+2026-07-13 18:05:02.734 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:05:02.735 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:02.735 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:05:03.043 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:05:03.044 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:05:03.045 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:03.045 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:03.045 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:05:03.045 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:05:13.115 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:05:13.116 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:13.117 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:05:13.148 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:05:13.149 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:13.149 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:05:13.149 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:05:13.151 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:13.151 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:05:17.732 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:05:17.733 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:05:17.734 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=d37fe9c6517b51ce7388da0c9d839c35
+2026-07-13 18:06:26.606 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-07-13 18:06:26.608 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:26.609 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-07-13 18:06:26.619 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/
+2026-07-13 18:06:26.620 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:26.620 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/
+2026-07-13 18:06:26.702 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:06:26.787 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:26.788 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:06:26.821 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/login.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:26.825 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:26.828 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/login.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:26.941 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/background.gif
+2026-07-13 18:06:26.942 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:26.942 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/background.gif
+2026-07-13 18:06:30.227 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/login.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.228 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.229 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/login.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.295 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/header.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.298 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.298 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/header.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.310 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tables.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.311 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/help.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.312 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.313 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tables.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.313 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/query.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.317 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.317 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.333 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/help.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.335 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/query.jsp?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:30.480 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_line.gif
+2026-07-13 18:06:30.480 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_refresh.gif
+2026-07-13 18:06:30.481 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_disconnect.gif
+2026-07-13 18:06:30.482 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.482 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.482 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_refresh.gif
+2026-07-13 18:06:30.484 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_commit.gif
+2026-07-13 18:06:30.486 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.486 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_commit.gif
+2026-07-13 18:06:30.488 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.488 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_run.gif
+2026-07-13 18:06:30.488 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_disconnect.gif
+2026-07-13 18:06:30.489 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_rollback.gif
+2026-07-13 18:06:30.489 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.490 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_line.gif
+2026-07-13 18:06:30.493 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_run.gif
+2026-07-13 18:06:30.495 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.496 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_rollback.gif
+2026-07-13 18:06:30.525 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_history.gif
+2026-07-13 18:06:30.527 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.528 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_history.gif
+2026-07-13 18:06:30.528 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_run_selected.gif
+2026-07-13 18:06:30.530 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_help.gif
+2026-07-13 18:06:30.531 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.532 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_help.gif
+2026-07-13 18:06:30.537 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_stop.gif
+2026-07-13 18:06:30.538 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.539 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_stop.gif
+2026-07-13 18:06:30.542 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.543 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_run_selected.gif
+2026-07-13 18:06:30.550 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree.js
+2026-07-13 18:06:30.552 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.553 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree.js
+2026-07-13 18:06:30.609 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_plus.gif
+2026-07-13 18:06:30.609 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_database.gif
+2026-07-13 18:06:30.609 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_minus.gif
+2026-07-13 18:06:30.610 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.610 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.611 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_plus.gif
+2026-07-13 18:06:30.610 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.612 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_database.gif
+2026-07-13 18:06:30.612 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_minus.gif
+2026-07-13 18:06:30.626 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_table.gif
+2026-07-13 18:06:30.626 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_empty.gif
+2026-07-13 18:06:30.627 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_column.gif
+2026-07-13 18:06:30.627 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.627 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.628 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_column.gif
+2026-07-13 18:06:30.628 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.628 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_empty.gif
+2026-07-13 18:06:30.628 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_table.gif
+2026-07-13 18:06:30.629 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_index.gif
+2026-07-13 18:06:30.628 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_index_az.gif
+2026-07-13 18:06:30.629 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_type.gif
+2026-07-13 18:06:30.631 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.631 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.631 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_type.gif
+2026-07-13 18:06:30.631 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_index_az.gif
+2026-07-13 18:06:30.632 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.632 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_index.gif
+2026-07-13 18:06:30.641 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_view.gif
+2026-07-13 18:06:30.641 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_folder.gif
+2026-07-13 18:06:30.642 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_users.gif
+2026-07-13 18:06:30.642 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.642 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.642 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.643 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_users.gif
+2026-07-13 18:06:30.643 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_folder.gif
+2026-07-13 18:06:30.643 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_view.gif
+2026-07-13 18:06:30.645 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_info.gif
+2026-07-13 18:06:30.646 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_user.gif
+2026-07-13 18:06:30.646 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.646 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_info.gif
+2026-07-13 18:06:30.647 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:30.648 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_user.gif
+2026-07-13 18:06:34.086 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:34.087 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:34.087 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:06:34.118 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:06:34.119 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:06:34.121 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:08:31.052 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-13 18:08:31.054 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-13 18:08:31.165 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 111 ms
+2026-07-13 18:08:31.166 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-07-13 18:08:31.168 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.170 [http-nio-8080-exec-2] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/swagger-ui/index.html' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-13 18:08:31.205 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-07-13 18:08:31.657 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2026-07-13 18:08:31.658 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.661 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2026-07-13 18:08:31.675 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2026-07-13 18:08:31.675 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-07-13 18:08:31.675 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-07-13 18:08:31.675 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.677 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.677 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.678 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-07-13 18:08:31.679 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.680 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-07-13 18:08:31.680 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-07-13 18:08:31.685 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2026-07-13 18:08:31.690 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-07-13 18:08:31.957 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-07-13 18:08:31.960 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-07-13 18:08:31.961 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.965 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-07-13 18:08:31.972 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:31.974 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-07-13 18:08:32.112 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-07-13 18:08:32.113 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:32.115 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-07-13 18:08:33.157 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 702 ms
+2026-07-13 18:08:42.297 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:08:42.298 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:42.298 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:08:42.324 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:08:42.324 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:08:42.325 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:42.325 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:08:42.325 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:08:42.325 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:09:05.017 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2026-07-13 18:09:05.017 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:09:05.018 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /auth/login
+2026-07-13 18:09:05.137 [http-nio-8080-exec-3] INFO  b.c.s.core.service.AuthService - Tentando login: email=joao@email.com
+2026-07-13 18:09:05.346 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:09:05.370 [http-nio-8080-exec-3] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-07-13 18:09:05.370 [http-nio-8080-exec-3] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Failed to authenticate since password does not match stored value
+2026-07-13 18:09:05.370 [http-nio-8080-exec-3] ERROR b.c.s.core.service.AuthService - Erro no login: Bad credentials
+2026-07-13 18:09:05.380 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [br.com.solicitacao.core.exception.BusinessException: Credenciais inválidas]
+2026-07-13 18:09:35.713 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2026-07-13 18:09:35.714 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:09:35.715 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /auth/login
+2026-07-13 18:09:35.717 [http-nio-8080-exec-9] INFO  b.c.s.core.service.AuthService - Tentando login: email=joao@email.com
+2026-07-13 18:09:35.718 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:09:35.719 [http-nio-8080-exec-9] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-07-13 18:09:35.719 [http-nio-8080-exec-9] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Failed to authenticate since password does not match stored value
+2026-07-13 18:09:35.719 [http-nio-8080-exec-9] ERROR b.c.s.core.service.AuthService - Erro no login: Bad credentials
+2026-07-13 18:09:35.720 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [br.com.solicitacao.core.exception.BusinessException: Credenciais inválidas]
+2026-07-13 18:10:00.225 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/register
+2026-07-13 18:10:00.225 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:10:00.225 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /auth/register
+2026-07-13 18:10:00.232 [http-nio-8080-exec-1] INFO  b.c.s.core.service.AuthService - Registrando usuário: email=eduardo@email.com
+2026-07-13 18:10:00.237 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-13 18:10:00.344 [http-nio-8080-exec-1] INFO  b.c.s.core.service.AuthService - Usuário registrado com sucesso: id=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:10:00.457 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-13 18:10:15.281 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2026-07-13 18:10:15.281 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:10:15.281 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /auth/login
+2026-07-13 18:10:15.282 [http-nio-8080-exec-4] INFO  b.c.s.core.service.AuthService - Tentando login: email=eduardo@email.com
+2026-07-13 18:10:15.284 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:10:15.356 [http-nio-8080-exec-4] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-07-13 18:10:15.357 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:10:15.358 [http-nio-8080-exec-4] INFO  b.c.s.core.service.AuthService - Login realizado com sucesso: email=eduardo@email.com
+2026-07-13 18:10:38.895 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /solicitations
+2026-07-13 18:10:38.944 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:10:38.949 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /solicitations
+2026-07-13 18:10:38.950 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:10:38.951 [http-nio-8080-exec-5] INFO  b.c.s.c.service.SolicitationService - === CREATE SOLICITATION ===
+2026-07-13 18:10:38.951 [http-nio-8080-exec-5] INFO  b.c.s.c.service.SolicitationService - ClientId: 44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:10:38.952 [http-nio-8080-exec-5] INFO  b.c.s.c.service.SolicitationService - Solicitation created with id: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:10:38.958 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        solicitations
+        (analysis_comment, analyzed_at, analyzed_by, cep, city, client_id, complement, created_at, current_step, description, estimated_value, neighborhood, number, preferred_date, priority, service_type, state, status, street, submitted_at, terms_accepted, title, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-13 18:11:12.199 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/step1
+2026-07-13 18:11:12.202 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:11:12.217 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/step1
+2026-07-13 18:11:12.225 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - === SAVE STEP 1 ===
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - Solicitation ID: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - ClientId: 44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - ServiceType: INSTALLATION
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - Title: Teste Auditoria
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - Description length: 103
+2026-07-13 18:11:12.226 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - Finding solicitation: id=5a8b2520-18ed-4c17-8e45-cd94f23f4b81, clientId=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:11:12.240 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        se1_0.id,
+        se1_0.analysis_comment,
+        se1_0.analyzed_at,
+        se1_0.analyzed_by,
+        se1_0.cep,
+        se1_0.city,
+        se1_0.client_id,
+        se1_0.complement,
+        se1_0.created_at,
+        se1_0.current_step,
+        se1_0.description,
+        se1_0.estimated_value,
+        se1_0.neighborhood,
+        se1_0.number,
+        se1_0.preferred_date,
+        se1_0.priority,
+        se1_0.service_type,
+        se1_0.state,
+        se1_0.status,
+        se1_0.street,
+        se1_0.submitted_at,
+        se1_0.terms_accepted,
+        se1_0.title,
+        se1_0.updated_at 
+    from
+        solicitations se1_0 
+    where
+        se1_0.id=?
+2026-07-13 18:11:12.242 [http-nio-8080-exec-2] INFO  b.c.s.c.service.SolicitationService - Step 1 saved successfully. Current step: 1
+2026-07-13 18:11:12.249 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    update
+        solicitations 
+    set
+        analysis_comment=?,
+        analyzed_at=?,
+        analyzed_by=?,
+        cep=?,
+        city=?,
+        client_id=?,
+        complement=?,
+        created_at=?,
+        current_step=?,
+        description=?,
+        estimated_value=?,
+        neighborhood=?,
+        number=?,
+        preferred_date=?,
+        priority=?,
+        service_type=?,
+        state=?,
+        status=?,
+        street=?,
+        submitted_at=?,
+        terms_accepted=?,
+        title=?,
+        updated_at=? 
+    where
+        id=?
+2026-07-13 18:11:34.657 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/step2
+2026-07-13 18:11:34.659 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:11:34.663 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/step2
+2026-07-13 18:11:34.678 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:11:34.680 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - === SAVE STEP 2 ===
+2026-07-13 18:11:34.680 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - Solicitation ID: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:11:34.680 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - CEP: 01310-000
+2026-07-13 18:11:34.680 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - Number: 100
+2026-07-13 18:11:34.680 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - Finding solicitation: id=5a8b2520-18ed-4c17-8e45-cd94f23f4b81, clientId=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:11:34.681 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        se1_0.id,
+        se1_0.analysis_comment,
+        se1_0.analyzed_at,
+        se1_0.analyzed_by,
+        se1_0.cep,
+        se1_0.city,
+        se1_0.client_id,
+        se1_0.complement,
+        se1_0.created_at,
+        se1_0.current_step,
+        se1_0.description,
+        se1_0.estimated_value,
+        se1_0.neighborhood,
+        se1_0.number,
+        se1_0.preferred_date,
+        se1_0.priority,
+        se1_0.service_type,
+        se1_0.state,
+        se1_0.status,
+        se1_0.street,
+        se1_0.submitted_at,
+        se1_0.terms_accepted,
+        se1_0.title,
+        se1_0.updated_at 
+    from
+        solicitations se1_0 
+    where
+        se1_0.id=?
+2026-07-13 18:11:34.681 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - Cleaned CEP: 01310000
+2026-07-13 18:11:35.590 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - ViaCEP response: ViaCepResponse(cep=01310-000, logradouro=Avenida Paulista, bairro=Bela Vista, localidade=São Paulo, uf=SP, complemento=até 610 - lado par, ibge=3550308, gia=1004, ddd=11, siafi=7107, erro=false)
+2026-07-13 18:11:35.592 [http-nio-8080-exec-8] INFO  b.c.s.c.service.SolicitationService - Step 2 saved. Current step: 2, State: SP
+2026-07-13 18:11:35.592 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    update
+        solicitations 
+    set
+        analysis_comment=?,
+        analyzed_at=?,
+        analyzed_by=?,
+        cep=?,
+        city=?,
+        client_id=?,
+        complement=?,
+        created_at=?,
+        current_step=?,
+        description=?,
+        estimated_value=?,
+        neighborhood=?,
+        number=?,
+        preferred_date=?,
+        priority=?,
+        service_type=?,
+        state=?,
+        status=?,
+        street=?,
+        submitted_at=?,
+        terms_accepted=?,
+        title=?,
+        updated_at=? 
+    where
+        id=?
+2026-07-13 18:11:46.040 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/step3
+2026-07-13 18:11:46.042 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:11:46.045 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/step3
+2026-07-13 18:11:46.067 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:11:46.068 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - === SAVE STEP 3 ===
+2026-07-13 18:11:46.068 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - Solicitation ID: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:11:46.068 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - Priority: MEDIUM
+2026-07-13 18:11:46.068 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - Estimated Value: 150.00
+2026-07-13 18:11:46.070 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - Terms Accepted: true
+2026-07-13 18:11:46.070 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - Finding solicitation: id=5a8b2520-18ed-4c17-8e45-cd94f23f4b81, clientId=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:11:46.070 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        se1_0.id,
+        se1_0.analysis_comment,
+        se1_0.analyzed_at,
+        se1_0.analyzed_by,
+        se1_0.cep,
+        se1_0.city,
+        se1_0.client_id,
+        se1_0.complement,
+        se1_0.created_at,
+        se1_0.current_step,
+        se1_0.description,
+        se1_0.estimated_value,
+        se1_0.neighborhood,
+        se1_0.number,
+        se1_0.preferred_date,
+        se1_0.priority,
+        se1_0.service_type,
+        se1_0.state,
+        se1_0.status,
+        se1_0.street,
+        se1_0.submitted_at,
+        se1_0.terms_accepted,
+        se1_0.title,
+        se1_0.updated_at 
+    from
+        solicitations se1_0 
+    where
+        se1_0.id=?
+2026-07-13 18:11:46.070 [http-nio-8080-exec-3] INFO  b.c.s.c.service.SolicitationService - Step 3 saved. Current step: 3
+2026-07-13 18:11:46.072 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    update
+        solicitations 
+    set
+        analysis_comment=?,
+        analyzed_at=?,
+        analyzed_by=?,
+        cep=?,
+        city=?,
+        client_id=?,
+        complement=?,
+        created_at=?,
+        current_step=?,
+        description=?,
+        estimated_value=?,
+        neighborhood=?,
+        number=?,
+        preferred_date=?,
+        priority=?,
+        service_type=?,
+        state=?,
+        status=?,
+        street=?,
+        submitted_at=?,
+        terms_accepted=?,
+        title=?,
+        updated_at=? 
+    where
+        id=?
+2026-07-13 18:12:06.482 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/submit
+2026-07-13 18:12:06.485 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:12:06.499 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/submit
+2026-07-13 18:12:06.514 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:12:06.515 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:12:06.516 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - === SUBMIT SOLICITATION ===
+2026-07-13 18:12:06.516 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - ID: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:12:06.516 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - ClientId: 44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:12:06.516 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Finding solicitation: id=5a8b2520-18ed-4c17-8e45-cd94f23f4b81, clientId=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:12:06.516 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        se1_0.id,
+        se1_0.analysis_comment,
+        se1_0.analyzed_at,
+        se1_0.analyzed_by,
+        se1_0.cep,
+        se1_0.city,
+        se1_0.client_id,
+        se1_0.complement,
+        se1_0.created_at,
+        se1_0.current_step,
+        se1_0.description,
+        se1_0.estimated_value,
+        se1_0.neighborhood,
+        se1_0.number,
+        se1_0.preferred_date,
+        se1_0.priority,
+        se1_0.service_type,
+        se1_0.state,
+        se1_0.status,
+        se1_0.street,
+        se1_0.submitted_at,
+        se1_0.terms_accepted,
+        se1_0.title,
+        se1_0.updated_at 
+    from
+        solicitations se1_0 
+    where
+        se1_0.id=?
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Solicitation found: status=DRAFT, currentStep=3
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Step 1: serviceType=INSTALLATION, title=Teste Auditoria
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Step 2: cep=01310000, number=100, street=Avenida Paulista, neighborhood=Bela Vista, city=São Paulo, state=SP
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Step 3: priority=MEDIUM, preferredDate=2026-08-15, estimatedValue=150.00, termsAccepted=true
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - === VALIDATING COMPLETE SOLICITATION ===
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Validation completed successfully
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Validation passed successfully
+2026-07-13 18:12:06.517 [http-nio-8080-exec-7] INFO  b.c.s.c.service.SolicitationService - Solicitation submitted successfully: id=5a8b2520-18ed-4c17-8e45-cd94f23f4b81, status=SUBMITTED
+2026-07-13 18:12:06.518 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    update
+        solicitations 
+    set
+        analysis_comment=?,
+        analyzed_at=?,
+        analyzed_by=?,
+        cep=?,
+        city=?,
+        client_id=?,
+        complement=?,
+        created_at=?,
+        current_step=?,
+        description=?,
+        estimated_value=?,
+        neighborhood=?,
+        number=?,
+        preferred_date=?,
+        priority=?,
+        service_type=?,
+        state=?,
+        status=?,
+        street=?,
+        submitted_at=?,
+        terms_accepted=?,
+        title=?,
+        updated_at=? 
+    where
+        id=?
+2026-07-13 18:12:06.520 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, created_at, duration_ms, entity_id, error_message, success, user_id, user_role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-13 18:12:06.523 [http-nio-8080-exec-7] INFO  b.c.s.infrastructure.aop.AuditAspect - AUDIT: user=44b844cd-9e18-43e1-8955-5c00032b804c, action=SUBMIT, success=true, duration=8ms
+2026-07-13 18:12:18.725 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:12:18.726 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:12:18.726 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:12:18.752 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:12:18.753 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:12:18.753 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:12:18.756 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:12:18.756 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:12:18.757 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:12:24.237 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:12:24.238 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:12:24.238 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:13:34.871 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:13:34.872 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:13:34.872 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:13:34.896 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:13:34.897 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:13:34.897 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:13:34.899 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:13:34.900 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:13:34.900 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:15:14.238 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:15:14.239 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:15:14.239 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:15:14.268 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-13 18:15:14.269 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:15:14.270 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-13 18:15:14.273 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/table.js
+2026-07-13 18:15:14.274 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:15:14.274 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/table.js
+2026-07-13 18:15:18.304 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:15:18.304 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:15:18.305 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:15:21.805 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:15:21.806 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:15:21.807 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/query.do?jsessionid=a76fe6481e0967773612bf73eb85f5be
+2026-07-13 18:15:46.342 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /analyst/solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/start
+2026-07-13 18:15:46.345 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:15:46.351 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /analyst/solicitations/5a8b2520-18ed-4c17-8e45-cd94f23f4b81/start
+2026-07-13 18:15:46.353 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:15:46.354 [http-nio-8080-exec-2] INFO  b.c.s.a.controller.AnalystController - === START ANALYSIS ===
+2026-07-13 18:15:46.354 [http-nio-8080-exec-2] INFO  b.c.s.a.controller.AnalystController - Solicitation ID: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:15:46.354 [http-nio-8080-exec-2] INFO  b.c.s.a.controller.AnalystController - Authenticated user: eduardo@email.com
+2026-07-13 18:15:46.355 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-13 18:15:46.355 [http-nio-8080-exec-2] INFO  b.c.s.a.controller.AnalystController - Analyst ID: 44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:15:46.356 [http-nio-8080-exec-2] INFO  b.c.s.core.service.AnalystService - === START ANALYSIS SERVICE ===
+2026-07-13 18:15:46.356 [http-nio-8080-exec-2] INFO  b.c.s.core.service.AnalystService - Solicitation ID: 5a8b2520-18ed-4c17-8e45-cd94f23f4b81
+2026-07-13 18:15:46.356 [http-nio-8080-exec-2] INFO  b.c.s.core.service.AnalystService - Analyst ID: 44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:15:46.356 [http-nio-8080-exec-2] INFO  b.c.s.core.service.AnalystService - Getting solicitation for analyst: id=5a8b2520-18ed-4c17-8e45-cd94f23f4b81, analystId=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:15:46.357 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        se1_0.id,
+        se1_0.analysis_comment,
+        se1_0.analyzed_at,
+        se1_0.analyzed_by,
+        se1_0.cep,
+        se1_0.city,
+        se1_0.client_id,
+        se1_0.complement,
+        se1_0.created_at,
+        se1_0.current_step,
+        se1_0.description,
+        se1_0.estimated_value,
+        se1_0.neighborhood,
+        se1_0.number,
+        se1_0.preferred_date,
+        se1_0.priority,
+        se1_0.service_type,
+        se1_0.state,
+        se1_0.status,
+        se1_0.street,
+        se1_0.submitted_at,
+        se1_0.terms_accepted,
+        se1_0.title,
+        se1_0.updated_at 
+    from
+        solicitations se1_0 
+    where
+        se1_0.id=?
+2026-07-13 18:15:46.358 [http-nio-8080-exec-2] INFO  b.c.s.core.service.AnalystService - Buscando estados do analista: userId=44b844cd-9e18-43e1-8955-5c00032b804c
+2026-07-13 18:15:46.360 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ace1_0.id,
+        ace1_0.state,
+        ace1_0.user_id 
+    from
+        analyst_coverage ace1_0 
+    where
+        ace1_0.user_id=?
+2026-07-13 18:15:46.360 [http-nio-8080-exec-2] INFO  b.c.s.core.service.AnalystService - Coberturas encontradas: 0
+2026-07-13 18:15:46.362 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, created_at, duration_ms, entity_id, error_message, success, user_id, user_role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-13 18:15:46.362 [http-nio-8080-exec-2] INFO  b.c.s.infrastructure.aop.AuditAspect - AUDIT: user=44b844cd-9e18-43e1-8955-5c00032b804c, action=START_ANALYSIS, success=false, duration=8ms
+2026-07-13 18:15:46.365 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [br.com.solicitacao.core.exception.BusinessException: Analyst does not have permission to access solicitations from this state: SP]
+2026-07-13 18:27:51.229 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:27:51.533 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-13 18:27:51.536 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-13 18:27:51.590 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-13 18:30:07.349 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-13 18:30:07.406 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 31504 (C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-13 18:30:07.406 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-13 18:30:07.407 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-13 18:30:07.473 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-13 18:30:07.475 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-13 18:30:08.571 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:30:08.571 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 18:30:08.642 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2026-07-13 18:30:08.644 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:30:08.644 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:30:08.654 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 1 Elasticsearch repository interface.
+2026-07-13 18:30:09.127 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:30:09.128 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:30:09.146 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AnalystCoverageRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:30:09.147 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AuditLogRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:30:09.147 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.SolicitationRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:30:09.147 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:30:09.147 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2026-07-13 18:30:09.398 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=fa5c32b5-881b-3771-9045-fb09c841a9a2
+2026-07-13 18:30:10.351 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-13 18:30:10.360 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-13 18:30:10.362 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-13 18:30:10.363 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-13 18:30:10.443 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-13 18:30:10.444 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2969 ms
+2026-07-13 18:30:10.606 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-13 18:30:10.820 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-13 18:30:10.822 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-13 18:30:10.833 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-13 18:30:11.052 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2026-07-13 18:30:11.052 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-07-13 18:30:11.052 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - 
+2026-07-13 18:30:11.092 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:mem:solicitacao_db (H2 2.2)
+2026-07-13 18:30:11.095 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-07-13 18:30:11.111 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-07-13 18:30:11.152 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+2026-07-13 18:30:11.159 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1 - create users table"
+2026-07-13 18:30:11.172 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "2 - create analyst coverage table"
+2026-07-13 18:30:11.182 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "3 - create solicitations table"
+2026-07-13 18:30:11.192 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "4 - create audit logs table"
+2026-07-13 18:30:11.204 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "5 - insert admin user"
+2026-07-13 18:30:11.218 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "6 - create solicitations table"
+2026-07-13 18:30:11.222 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "7 - create cobertura analista table"
+2026-07-13 18:30:11.228 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "8 - insert test data"
+2026-07-13 18:30:11.236 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "9 - create audit logs table"
+2026-07-13 18:30:11.250 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 9 migrations to schema "PUBLIC", now at version v9 (execution time 00:00.027s)
+2026-07-13 18:30:11.363 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-13 18:30:11.460 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-13 18:30:11.514 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-13 18:30:11.877 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 18:30:11.935 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 18:30:12.871 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 18:30:12.896 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:30:13.337 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-13 18:30:13.798 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 18:30:13.861 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-13 18:30:14.452 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+2026-07-13 18:30:14.453 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:265)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:144)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-07-13 18:30:14.456 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:30:14.460 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-13 18:30:14.460 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-13 18:30:14.461 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-13 18:30:14.462 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-13 18:30:14.479 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-13 18:30:14.499 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'solicitationService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:571)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:571)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:536)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory.getTargetRepository(ElasticsearchRepositoryFactory.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactoryBean.afterPropertiesSet(ElasticsearchRepositoryFactoryBean.java:69)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	... 61 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateExceptionIfPossible(ElasticsearchExceptionTranslator.java:110)
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:64)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:73)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.doExists(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.exists(IndicesTemplate.java:169)
+	at org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository.<init>(SimpleElasticsearchRepository.java:85)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 74 common frames omitted
+Caused by: java.lang.RuntimeException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:63)
+	... 82 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:930)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:300)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:288)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient.performRequest(RestClientHttpClient.java:91)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.performRequest(ElasticsearchTransportBase.java:137)
+	at co.elastic.clients.elasticsearch.indices.ElasticsearchIndicesClient.exists(ElasticsearchIndicesClient.java:655)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.lambda$doExists$2(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:71)
+	... 81 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

@@ -27,6 +27,7 @@ public class SolicitationService {
 
     private final SolicitationRepository solicitationRepository;
     private final ViaCepClient viaCepClient;
+    private final ElasticsearchService elasticsearchService;
 
     @Transactional
     public SolicitationEntity create(UUID clientId) {
@@ -40,6 +41,8 @@ public class SolicitationService {
                 .build();
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
+        elasticsearchService.indexSolicitation(saved.getId());
+
         log.info("Solicitation created with id: {}", saved.getId());
         return saved;
     }
@@ -69,6 +72,7 @@ public class SolicitationService {
         }
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
+        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Step 1 saved successfully. Current step: {}", saved.getCurrentStep());
         return saved;
     }
@@ -136,6 +140,7 @@ public class SolicitationService {
         }
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
+        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Step 2 saved. Current step: {}, State: {}", saved.getCurrentStep(), saved.getState());
         return saved;
     }
@@ -171,6 +176,7 @@ public class SolicitationService {
         }
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
+        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Step 3 saved. Current step: {}", saved.getCurrentStep());
         return saved;
     }
@@ -209,6 +215,7 @@ public class SolicitationService {
         solicitation.setSubmittedAt(LocalDateTime.now());
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
+        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Solicitation submitted successfully: id={}, status={}", saved.getId(), saved.getStatus());
         return saved;
     }
