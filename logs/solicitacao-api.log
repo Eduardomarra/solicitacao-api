@@ -9432,3 +9432,331 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
 	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-13 18:56:54.746 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-13 18:56:54.809 [main] INFO  b.c.s.i.AuthIntegrationTest - Starting AuthIntegrationTest using Java 21.0.11 with PID 37336 (started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-13 18:56:54.810 [main] DEBUG b.c.s.i.AuthIntegrationTest - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-13 18:56:54.811 [main] INFO  b.c.s.i.AuthIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-13 18:56:56.410 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:56:56.410 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 18:56:56.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2026-07-13 18:56:56.482 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:56:56.482 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:56:56.490 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 1 Elasticsearch repository interface.
+2026-07-13 18:56:57.279 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:56:57.279 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:56:57.305 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AnalystCoverageRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:56:57.306 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AuditLogRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:56:57.306 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.SolicitationRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:56:57.306 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:56:57.306 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2026-07-13 18:56:57.699 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=0bbf5cf4-7fde-3029-854e-a26b9c5c2f04
+2026-07-13 18:56:58.673 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-13 18:56:59.117 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-13 18:56:59.121 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-13 18:56:59.274 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2026-07-13 18:56:59.274 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-07-13 18:56:59.274 [main] INFO  o.f.c.i.license.VersionPrinter - 
+2026-07-13 18:56:59.394 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:mem:solicitacao_db (H2 2.2)
+2026-07-13 18:56:59.403 [main] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-07-13 18:56:59.424 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-07-13 18:56:59.542 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+2026-07-13 18:56:59.550 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1 - create users table"
+2026-07-13 18:56:59.571 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "2 - create analyst coverage table"
+2026-07-13 18:56:59.592 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "3 - create solicitations table"
+2026-07-13 18:56:59.614 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "4 - create audit logs table"
+2026-07-13 18:56:59.644 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "5 - insert admin user"
+2026-07-13 18:56:59.676 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "6 - create solicitations table"
+2026-07-13 18:56:59.684 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "7 - create cobertura analista table"
+2026-07-13 18:56:59.699 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "8 - insert test data"
+2026-07-13 18:56:59.718 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "9 - create audit logs table"
+2026-07-13 18:56:59.729 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 9 migrations to schema "PUBLIC", now at version v9 (execution time 00:00.059s)
+2026-07-13 18:56:59.916 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-13 18:57:00.077 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-13 18:57:00.167 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-13 18:57:00.364 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 18:57:00.463 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 18:57:01.589 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 18:57:01.624 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:57:03.081 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 18:57:11.892 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+2026-07-13 18:57:11.983 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39c65cb4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@283730de, org.springframework.security.web.context.SecurityContextHolderFilter@1391204c, org.springframework.security.web.header.HeaderWriterFilter@6cd8b2de, org.springframework.web.filter.CorsFilter@5508c719, org.springframework.security.web.authentication.logout.LogoutFilter@6b1293a5, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@2eab279, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fc52b51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@571010af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1386f8bb, org.springframework.security.web.session.SessionManagementFilter@426786ee, org.springframework.security.web.access.ExceptionTranslationFilter@1d8ab0dc, org.springframework.security.web.access.intercept.AuthorizationFilter@1124fd8]
+2026-07-13 18:57:13.309 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-13 18:57:13.419 [main] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-13 18:57:13.420 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-13 18:57:13.420 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-13 18:57:13.422 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-07-13 18:57:13.612 [main] INFO  b.c.s.i.AuthIntegrationTest - Started AuthIntegrationTest in 19.604 seconds (process running for 25.367)
+2026-07-13 18:57:13.863 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 18:57:13.881 [main] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-13 18:57:13.896 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:57:13.906 [main] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2026-07-13 18:57:13.951 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 18:57:13.951 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:57:13.954 [main] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2026-07-13 18:57:13.962 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 18:57:13.964 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:57:13.965 [main] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2026-07-13 18:57:13.999 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:57:14.001 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-13 18:57:14.009 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-13 18:59:27.789 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-13 18:59:27.842 [main] INFO  b.c.s.i.AuthIntegrationTest - Starting AuthIntegrationTest using Java 21.0.11 with PID 36960 (started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-13 18:59:27.842 [main] DEBUG b.c.s.i.AuthIntegrationTest - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-13 18:59:27.843 [main] INFO  b.c.s.i.AuthIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-13 18:59:30.646 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:59:30.646 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 18:59:30.712 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2026-07-13 18:59:30.714 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:59:30.714 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:59:30.721 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 1 Elasticsearch repository interface.
+2026-07-13 18:59:31.350 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 18:59:31.351 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2026-07-13 18:59:31.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AnalystCoverageRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:59:31.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AuditLogRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:59:31.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.SolicitationRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:59:31.375 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 18:59:31.375 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2026-07-13 18:59:31.688 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=dca9577b-482e-373f-a680-ad55319e4b4c
+2026-07-13 18:59:32.412 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-13 18:59:32.701 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-13 18:59:32.703 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-13 18:59:32.810 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2026-07-13 18:59:32.810 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-07-13 18:59:32.810 [main] INFO  o.f.c.i.license.VersionPrinter - 
+2026-07-13 18:59:32.872 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:mem:solicitacao_db (H2 2.2)
+2026-07-13 18:59:32.877 [main] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-07-13 18:59:32.897 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-07-13 18:59:32.974 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+2026-07-13 18:59:32.984 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1 - create users table"
+2026-07-13 18:59:32.998 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "2 - create analyst coverage table"
+2026-07-13 18:59:33.011 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "3 - create solicitations table"
+2026-07-13 18:59:33.023 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "4 - create audit logs table"
+2026-07-13 18:59:33.032 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "5 - insert admin user"
+2026-07-13 18:59:33.048 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "6 - create solicitations table"
+2026-07-13 18:59:33.054 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "7 - create cobertura analista table"
+2026-07-13 18:59:33.062 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "8 - insert test data"
+2026-07-13 18:59:33.073 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "9 - create audit logs table"
+2026-07-13 18:59:33.081 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 9 migrations to schema "PUBLIC", now at version v9 (execution time 00:00.032s)
+2026-07-13 18:59:33.206 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-13 18:59:33.346 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-13 18:59:33.393 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-13 18:59:33.565 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 18:59:33.631 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 18:59:34.482 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 18:59:34.512 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:59:35.580 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 18:59:37.832 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+2026-07-13 18:59:37.864 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@184cd907, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25a0c208, org.springframework.security.web.context.SecurityContextHolderFilter@22cc606d, org.springframework.security.web.header.HeaderWriterFilter@2558c3fb, org.springframework.web.filter.CorsFilter@3f993305, org.springframework.security.web.authentication.logout.LogoutFilter@1a787480, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13987842, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c551798, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@223973a9, org.springframework.security.web.access.ExceptionTranslationFilter@2bdd6203, org.springframework.security.web.access.intercept.AuthorizationFilter@7144cd51]
+2026-07-13 18:59:37.885 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64e5f67b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@687101a2, org.springframework.security.web.context.SecurityContextHolderFilter@7e58471, org.springframework.security.web.header.HeaderWriterFilter@67f3a068, org.springframework.web.filter.CorsFilter@378c2cb4, org.springframework.security.web.authentication.logout.LogoutFilter@6d9f0836, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@71639428, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f2d77e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41d9b9de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c2ef25b, org.springframework.security.web.session.SessionManagementFilter@2fe235b4, org.springframework.security.web.access.ExceptionTranslationFilter@4fd1458d, org.springframework.security.web.access.intercept.AuthorizationFilter@2653b95f]
+2026-07-13 18:59:38.879 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-13 18:59:38.961 [main] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-13 18:59:38.962 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-13 18:59:38.963 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-13 18:59:38.965 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-07-13 18:59:39.107 [main] INFO  b.c.s.i.AuthIntegrationTest - Started AuthIntegrationTest in 11.82 seconds (process running for 16.327)
+2026-07-13 18:59:39.316 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 18:59:39.329 [main] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-13 18:59:39.346 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 18:59:39.381 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:59:39.412 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 18:59:39.413 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 18:59:39.417 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:59:39.429 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 18:59:39.430 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 18:59:39.433 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 18:59:39.456 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 18:59:39.459 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-13 18:59:39.463 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-13 19:01:40.154 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-13 19:01:40.208 [main] INFO  b.c.s.i.AuthIntegrationTest - Starting AuthIntegrationTest using Java 21.0.11 with PID 35692 (started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-13 19:01:40.209 [main] DEBUG b.c.s.i.AuthIntegrationTest - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-13 19:01:40.209 [main] INFO  b.c.s.i.AuthIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-13 19:01:41.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 19:01:41.955 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 19:01:42.047 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 4 JPA repository interfaces.
+2026-07-13 19:01:42.049 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 19:01:42.049 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-13 19:01:42.057 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 1 Elasticsearch repository interface.
+2026-07-13 19:01:42.875 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 19:01:42.875 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2026-07-13 19:01:42.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AnalystCoverageRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 19:01:42.898 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.AuditLogRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 19:01:42.899 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.SolicitationRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 19:01:42.899 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface br.com.solicitacao.infrastructure.persistence.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-07-13 19:01:42.899 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2026-07-13 19:01:43.344 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=dca9577b-482e-373f-a680-ad55319e4b4c
+2026-07-13 19:01:44.226 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-13 19:01:44.600 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-13 19:01:44.603 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-13 19:01:44.757 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2026-07-13 19:01:44.758 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-07-13 19:01:44.758 [main] INFO  o.f.c.i.license.VersionPrinter - 
+2026-07-13 19:01:44.855 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:mem:solicitacao_db (H2 2.2)
+2026-07-13 19:01:44.863 [main] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-07-13 19:01:44.889 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-07-13 19:01:45.066 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+2026-07-13 19:01:45.091 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1 - create users table"
+2026-07-13 19:01:45.113 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "2 - create analyst coverage table"
+2026-07-13 19:01:45.129 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "3 - create solicitations table"
+2026-07-13 19:01:45.148 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "4 - create audit logs table"
+2026-07-13 19:01:45.159 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "5 - insert admin user"
+2026-07-13 19:01:45.213 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "6 - create solicitations table"
+2026-07-13 19:01:45.226 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "7 - create cobertura analista table"
+2026-07-13 19:01:45.237 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "8 - insert test data"
+2026-07-13 19:01:45.253 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "9 - create audit logs table"
+2026-07-13 19:01:45.273 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 9 migrations to schema "PUBLIC", now at version v9 (execution time 00:00.091s)
+2026-07-13 19:01:45.478 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-13 19:01:45.675 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-13 19:01:45.803 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-13 19:01:46.023 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 19:01:46.112 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 19:01:47.303 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 19:01:47.342 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:01:48.914 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 19:01:51.706 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+2026-07-13 19:01:51.747 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c6f363, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d34c3be, org.springframework.security.web.context.SecurityContextHolderFilter@607524ff, org.springframework.security.web.header.HeaderWriterFilter@2dfc833b, org.springframework.web.filter.CorsFilter@20e06d7b, org.springframework.security.web.authentication.logout.LogoutFilter@7122b1ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e52877d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@520dc647, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@756837b8, org.springframework.security.web.access.ExceptionTranslationFilter@13987842, org.springframework.security.web.access.intercept.AuthorizationFilter@5f851718]
+2026-07-13 19:01:51.772 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2511ddb7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13de7bba, org.springframework.security.web.context.SecurityContextHolderFilter@18182680, org.springframework.security.web.header.HeaderWriterFilter@378c2cb4, org.springframework.web.filter.CorsFilter@142c0c3e, org.springframework.security.web.authentication.logout.LogoutFilter@580930b7, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@72b8b04f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2081b4a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ddc735b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23d5c418, org.springframework.security.web.session.SessionManagementFilter@5163ba42, org.springframework.security.web.access.ExceptionTranslationFilter@6015326, org.springframework.security.web.access.intercept.AuthorizationFilter@6aabacb7]
+2026-07-13 19:01:53.004 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-13 19:01:53.112 [main] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-13 19:01:53.113 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-13 19:01:53.114 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-13 19:01:53.116 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-07-13 19:01:53.343 [main] INFO  b.c.s.i.AuthIntegrationTest - Started AuthIntegrationTest in 13.794 seconds (process running for 19.057)
+2026-07-13 19:01:53.669 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-07-13 19:01:53.669 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@2dd1de65]
+2026-07-13 19:01:53.686 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 19:01:53.704 [main] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-13 19:01:53.732 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 19:01:53.783 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2026-07-13 19:01:53.827 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-07-13 19:01:53.827 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4fb54ca0]
+2026-07-13 19:01:53.828 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 19:01:53.831 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 19:01:53.835 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2026-07-13 19:01:53.843 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-07-13 19:01:53.843 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@1a2a5343]
+2026-07-13 19:01:53.843 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 19:01:53.846 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 19:01:53.851 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2026-07-13 19:01:53.967 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:01:53.970 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-13 19:01:53.993 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-13 19:06:22.432 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-13 19:06:22.481 [main] INFO  b.c.s.i.AuthIntegrationTest - Starting AuthIntegrationTest using Java 21.0.11 with PID 37168 (started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-13 19:06:22.481 [main] DEBUG b.c.s.i.AuthIntegrationTest - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-13 19:06:22.481 [main] INFO  b.c.s.i.AuthIntegrationTest - The following 1 profile is active: "test"
+2026-07-13 19:06:23.584 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 19:06:23.584 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-13 19:06:23.650 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2026-07-13 19:06:23.653 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-13 19:06:23.653 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-13 19:06:23.661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 1 Elasticsearch repository interface.
+2026-07-13 19:06:24.604 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=1a57191e-1a45-37e4-86f7-75213bfe16bb
+2026-07-13 19:06:25.238 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-13 19:06:25.339 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-13 19:06:25.392 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-13 19:06:25.554 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-13 19:06:25.592 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-13 19:06:25.827 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-13 19:06:25.829 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-13 19:06:25.862 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-13 19:06:26.709 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-13 19:06:26.729 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-13 19:06:26.734 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-13 19:06:26.734 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-13 19:06:26.734 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-13 19:06:26.740 [main] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-13 19:06:26.747 [main] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-13 19:06:26.749 [main] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-13 19:06:26.756 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-13 19:06:26.762 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:06:27.773 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-13 19:06:29.778 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-13 19:06:29.811 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9cdef42, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7dd43529, org.springframework.security.web.context.SecurityContextHolderFilter@6b37cadf, org.springframework.security.web.header.HeaderWriterFilter@2c7178ed, org.springframework.web.filter.CorsFilter@4b7b0f85, org.springframework.security.web.authentication.logout.LogoutFilter@55a869a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53963f8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603520f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e3bfce8, org.springframework.security.web.access.ExceptionTranslationFilter@66f4fb48, org.springframework.security.web.access.intercept.AuthorizationFilter@6407c1b3]
+2026-07-13 19:06:29.831 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78995f04, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bb7e609, org.springframework.security.web.context.SecurityContextHolderFilter@6fd33f5a, org.springframework.security.web.header.HeaderWriterFilter@667b3972, org.springframework.web.filter.CorsFilter@1310324a, org.springframework.security.web.authentication.logout.LogoutFilter@22908698, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@5b2ac349, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@276038e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@687eb9c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aee98e7, org.springframework.security.web.session.SessionManagementFilter@1c84d89e, org.springframework.security.web.access.ExceptionTranslationFilter@6cf782b6, org.springframework.security.web.access.intercept.AuthorizationFilter@5aae7f30]
+2026-07-13 19:06:30.734 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-07-13 19:06:30.800 [main] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-13 19:06:30.800 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-13 19:06:30.802 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-13 19:06:30.802 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-07-13 19:06:30.927 [main] INFO  b.c.s.i.AuthIntegrationTest - Started AuthIntegrationTest in 9.019 seconds (process running for 12.615)
+2026-07-13 19:06:31.130 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 19:06:31.143 [main] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-13 19:06:31.158 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 19:06:31.191 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 19:06:31.221 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 19:06:31.222 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 19:06:31.226 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 19:06:31.235 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-07-13 19:06:31.237 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-07-13 19:06:31.241 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-13 19:06:31.267 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-13 19:06:31.269 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-13 19:06:31.272 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-13 19:06:31.272 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-13 19:06:31.277 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-13 19:06:31.280 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-13 19:06:31.282 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
