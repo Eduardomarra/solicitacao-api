@@ -1,5 +1,6 @@
 package br.com.solicitacao.api.controller;
 
+import br.com.solicitacao.api.annotation.Audit;
 import br.com.solicitacao.api.dto.request.AnalystDecisionRequest;
 import br.com.solicitacao.api.dto.response.SolicitationListResponse;
 import br.com.solicitacao.api.dto.response.SolicitationResponse;
@@ -72,6 +73,7 @@ public class AnalystController {
     }
 
     @PostMapping("/{id}/start")
+    @Audit(action = "START_ANALYSIS", entity = "SOLICITATION")
     @Operation(summary = "Start analysis (SUBMITTED → IN_REVIEW)")
     public ResponseEntity<SolicitationResponse> startAnalysis(@PathVariable UUID id) {
         log.info("=== START ANALYSIS ===");
@@ -87,6 +89,7 @@ public class AnalystController {
     }
 
     @PostMapping("/{id}/decide")
+    @Audit(action = "DECIDE", entity = "SOLICITATION")
     @Operation(summary = "Decide solicitation (APPROVE or REJECT)")
     public ResponseEntity<SolicitationResponse> decide(
             @PathVariable UUID id,

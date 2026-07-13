@@ -1,5 +1,6 @@
 package br.com.solicitacao.api.controller;
 
+import br.com.solicitacao.api.annotation.Audit;
 import br.com.solicitacao.api.dto.request.SolicitationStep1Request;
 import br.com.solicitacao.api.dto.request.SolicitationStep2Request;
 import br.com.solicitacao.api.dto.request.SolicitationStep3Request;
@@ -78,6 +79,7 @@ public class SolicitationController {
     }
 
     @PostMapping("/{id}/submit")
+    @Audit(action = "SUBMIT", entity = "SOLICITATION")
     @Operation(summary = "Submit solicitation for analysis")
     @ApiResponse(responseCode = "200", description = "Solicitation submitted successfully")
     @ApiResponse(responseCode = "400", description = "Incomplete solicitation")

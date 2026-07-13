@@ -1,5 +1,6 @@
 package br.com.solicitacao.api.controller;
 
+import br.com.solicitacao.api.annotation.Audit;
 import br.com.solicitacao.api.dto.request.CoverageRequest;
 import br.com.solicitacao.api.dto.request.CreateUserRequest;
 import br.com.solicitacao.api.dto.response.AuthResponse;
@@ -41,6 +42,7 @@ public class AdminController {
     private final SolicitationService solicitationService;
 
     @PostMapping("/users")
+    @Audit(action = "CREATE_USER", entity = "USER")
     @Operation(summary = "Create user (ANALYST or ADMIN)")
     public ResponseEntity<AuthResponse> createUser(@Valid @RequestBody CreateUserRequest request) {
         AuthResponse response = authService.createUser(request);
@@ -52,7 +54,7 @@ public class AdminController {
     public ResponseEntity<Void> updateAnalystCoverage(
             @PathVariable UUID userId,
             @Valid @RequestBody CoverageRequest request) {
-        analystService.updateCoverage(userId, request.getStates());
+        analystService.updateCoverage(userId, request.getUfs());
         return ResponseEntity.ok().build();
     }
 
