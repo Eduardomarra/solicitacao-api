@@ -278,4 +278,10 @@ public class SolicitationService {
 
         log.info("Validation completed successfully");
     }
+
+    public SolicitationEntity findById(UUID id) {
+        log.info("Buscando solicitação por ID: {}", id);
+        return solicitationRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Solicitação não encontrada"));
+    }
 }
