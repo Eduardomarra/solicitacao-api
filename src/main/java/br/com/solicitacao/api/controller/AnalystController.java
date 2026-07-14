@@ -54,20 +54,8 @@ public class AnalystController {
             @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
 
         UUID analystId = getCurrentUserId();
-        log.info("=== LISTANDO SOLICITAÇÕES ===");
-        log.info("Analyst ID: {}", analystId);
-
-        // Verificar se o analista tem cobertura
-        List<String> states = analystService.getAnalystStates(analystId);
-        log.info("Estados cobertos: {}", states);
-
-        if (states.isEmpty()) {
-            log.warn("Analista não possui cobertura! ID: {}", analystId);
-            // Não lançar exceção, retornar lista vazia
-            return ResponseEntity.ok(Page.empty(pageable));
-        }
-
         Page<SolicitationListResponse> solicitations = analystService.listSolicitationsForAnalyst(analystId, status, pageable);
+
         return ResponseEntity.ok(solicitations);
     }
 

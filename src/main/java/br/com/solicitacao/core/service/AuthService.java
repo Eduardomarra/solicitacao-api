@@ -12,8 +12,11 @@ import br.com.solicitacao.infrastructure.persistence.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +34,20 @@ public class AuthService {
     @Transactional
     public AuthResponse register(RegisterRequest request) {
         log.info("Registrando usuário: email={}", request.getEmail());
+
+        // Validar campos
+        if (request.getName() == null || request.getName().trim().isEmpty()) {
+            throw new IllegalArgumentException("Nome não pode ser vazio");
+        }
+        if (request.getEmail() == null || request.getEmail().trim().isEmpty()) {
+            throw new IllegalArgumentException("Email não pode ser nulo ou vazio");
+        }
+        if (request.getPassword() == null || request.getPassword().trim().isEmpty()) {
+            throw new IllegalArgumentException("Senha não pode ser nula ou vazia");
+        }
+        if (request.getPassword().length() < 6) {
+            throw new IllegalArgumentException("Senha deve ter no mínimo 6 caracteres");
+        }
 
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new BusinessException("Email já cadastrado");
@@ -57,16 +74,24 @@ public class AuthService {
     public AuthResponse login(LoginRequest request) {
         log.info("Tentando login: email={}", request.getEmail());
 
+        // Validar campos
+        if (request.getEmail() == null || request.getEmail().trim().isEmpty()) {
+            throw new IllegalArgumentException("Email não pode ser nulo ou vazio");
+        }
+        if (request.getPassword() == null || request.getPassword().trim().isEmpty()) {
+            throw new IllegalArgumentException("Senha não pode ser nula ou vazia");
+        }
+
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
             );
 
             UserEntity user = userRepository.findByEmail(request.getEmail())
-                    .orElseThrow(() -> new BusinessException("Usuário não encontrado"));
+                    .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
             if (!user.getEnabled()) {
-                throw new BusinessException("Usuário desabilitado");
+                throw new DisabledException("Usuário desabilitado");
             }
 
             String token = jwtUtil.generateToken(user.getEmail(), user.getRole().name());
@@ -74,6 +99,16 @@ public class AuthService {
 
             log.info("Login realizado com sucesso: email={}", user.getEmail());
             return buildAuthResponse(token, refreshToken, user);
+
+        } catch (BadCredentialsException e) {
+            log.error("Credenciais inválidas para email: {}", request.getEmail());
+            throw new BusinessException("Credenciais inválidas");
+        } catch (DisabledException e) {
+            log.error("Usuário desabilitado: {}", request.getEmail());
+            throw new BusinessException("Usuário desabilitado");
+        } catch (UsernameNotFoundException e) {
+            log.error("Usuário não encontrado: {}", request.getEmail());
+            throw new BusinessException("Credenciais inválidas");
         } catch (Exception e) {
             log.error("Erro no login: {}", e.getMessage());
             throw new BusinessException("Credenciais inválidas");
@@ -83,6 +118,19 @@ public class AuthService {
     @Transactional
     public AuthResponse createUser(CreateUserRequest request) {
         log.info("Criando usuário: email={}, role={}", request.getEmail(), request.getRole());
+
+        if (request.getName() == null || request.getName().trim().isEmpty()) {
+            throw new IllegalArgumentException("Nome não pode ser vazio");
+        }
+        if (request.getEmail() == null || request.getEmail().trim().isEmpty()) {
+            throw new IllegalArgumentException("Email não pode ser nulo ou vazio");
+        }
+        if (request.getPassword() == null || request.getPassword().trim().isEmpty()) {
+            throw new IllegalArgumentException("Senha não pode ser nula ou vazia");
+        }
+        if (request.getPassword().length() < 6) {
+            throw new IllegalArgumentException("Senha deve ter no mínimo 6 caracteres");
+        }
 
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new BusinessException("Email já cadastrado");
@@ -99,7 +147,6 @@ public class AuthService {
         user = userRepository.save(user);
         log.info("Usuário criado com sucesso: id={}", user.getId());
 
-        // Gerar token
         String token = jwtUtil.generateToken(user.getEmail(), user.getRole().name());
         String refreshToken = jwtUtil.generateRefreshToken(user.getEmail());
 
