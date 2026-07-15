@@ -11832,3 +11832,247 @@ Consider defining a bean of type 'br.com.solicitacao.core.service.ElasticsearchS
 2026-07-14 21:26:52.538 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2026-07-14 21:26:52.539 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-07-14 21:26:52.540 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 21:30:07.944 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 21:30:07.988 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 10716 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 21:30:07.989 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 21:30:07.989 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 21:30:08.039 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 21:30:08.040 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 21:30:08.761 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 21:30:08.762 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 21:30:08.804 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2026-07-14 21:30:09.323 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5fa656d4-9636-3986-a53b-8656eb049333
+2026-07-14 21:30:10.002 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 21:30:10.009 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 21:30:10.011 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 21:30:10.012 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 21:30:10.076 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 21:30:10.077 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2036 ms
+2026-07-14 21:30:10.217 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 21:30:10.376 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 21:30:10.378 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 21:30:10.387 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 21:30:10.562 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 21:30:10.620 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 21:30:10.651 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 21:30:10.854 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 21:30:10.893 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 21:30:11.617 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 21:30:11.631 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 21:30:11.634 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 21:30:11.635 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 21:30:11.635 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 21:30:11.639 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 21:30:11.644 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 21:30:11.646 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 21:30:11.651 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 21:30:11.655 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 21:30:12.010 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 21:30:12.589 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 21:30:12.671 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 21:30:12.721 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 21:30:13.139 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@516f28c2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@288497bf, org.springframework.security.web.context.SecurityContextHolderFilter@69c02c22, org.springframework.security.web.header.HeaderWriterFilter@34d6913, org.springframework.web.filter.CorsFilter@72986ab3, org.springframework.security.web.authentication.logout.LogoutFilter@20d1985b, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@27e76800, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ca7edad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@182470e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24043389, org.springframework.security.web.session.SessionManagementFilter@3f9c779f, org.springframework.security.web.access.ExceptionTranslationFilter@565c2aaa, org.springframework.security.web.access.intercept.AuthorizationFilter@6f1327f7]
+2026-07-14 21:30:14.189 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-14 21:30:14.205 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-07-14 21:30:14.233 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Started SolicitacaoApplication in 6.758 seconds (process running for 7.238)
+2026-07-14 21:30:14.285 [restartedMain] INFO  b.c.s.i.config.DataInitializer - === INICIALIZANDO DADOS ===
+2026-07-14 21:30:14.410 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-14 21:30:14.563 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-14 21:30:14.573 [restartedMain] INFO  b.c.s.i.config.DataInitializer - ✅ Admin criado com sucesso!
+2026-07-14 21:30:14.574 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Email: admin@email.com
+2026-07-14 21:30:14.574 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Senha: admin123
+2026-07-14 21:30:14.574 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Role: ADMIN
+2026-07-14 21:30:14.574 [restartedMain] INFO  b.c.s.i.config.DataInitializer - === DADOS INICIALIZADOS COM SUCESSO ===
+2026-07-14 21:30:25.579 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14 21:30:25.579 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-14 21:30:25.580 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-14 21:30:25.593 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-07-14 21:30:25.602 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/swagger-ui/index.html' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-14 21:30:25.614 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 21:30:25.616 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/swagger-ui/index.html' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-14 21:30:25.625 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-07-14 21:30:25.756 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-07-14 21:30:25.758 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 21:30:25.763 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-07-14 21:30:25.853 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-07-14 21:30:25.856 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 21:30:25.858 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-07-14 21:30:25.898 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-07-14 21:30:25.899 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 21:30:25.903 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-07-14 21:30:26.684 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 766 ms
+2026-07-14 21:30:46.018 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2026-07-14 21:30:46.019 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 21:30:46.020 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /auth/login
+2026-07-14 21:30:46.081 [http-nio-8080-exec-7] INFO  b.c.s.core.service.AuthService - Tentando login: email=admin@email.com
+2026-07-14 21:30:46.150 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-14 21:30:46.225 [http-nio-8080-exec-7] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-07-14 21:30:46.226 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-14 21:30:46.301 [http-nio-8080-exec-7] INFO  b.c.s.core.service.AuthService - Login realizado com sucesso: email=admin@email.com
+2026-07-14 21:32:32.775 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /admin/users
+2026-07-14 21:32:32.809 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-14 21:32:32.814 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /admin/users
+2026-07-14 21:32:32.829 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-14 21:32:32.830 [http-nio-8080-exec-8] INFO  b.c.s.core.service.AuthService - Criando usuário: email=analista@email.com, role=ANALYST
+2026-07-14 21:32:32.833 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=? 
+    fetch
+        first ? rows only
+2026-07-14 21:32:32.906 [http-nio-8080-exec-8] INFO  b.c.s.core.service.AuthService - Usuário criado com sucesso: id=27c6455b-a1b4-4a39-8afb-6baef6f3ffa4
+2026-07-14 21:32:32.908 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-14 21:32:32.914 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, created_at, duration_ms, entity_id, error_message, success, user_id, user_role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-14 21:32:32.915 [http-nio-8080-exec-8] INFO  b.c.s.infrastructure.aop.AuditAspect - AUDIT: user=ffdfba1e-044d-4171-8c40-ef65514c1a3c, action=CREATE_USER, success=true, duration=82ms
+2026-07-14 21:35:06.739 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 21:35:06.741 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 21:35:06.742 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 21:35:06.742 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 21:35:06.743 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 21:35:06.747 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 21:35:06.747 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 21:35:06.748 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
