@@ -1,13 +1,16 @@
 package br.com.solicitacao.api.controller;
 
-import br.com.solicitacao.api.annotation.Audit;
 import br.com.solicitacao.api.dto.request.SolicitationStep1Request;
 import br.com.solicitacao.api.dto.request.SolicitationStep2Request;
 import br.com.solicitacao.api.dto.request.SolicitationStep3Request;
+import br.com.solicitacao.api.dto.response.SolicitationListResponse;
 import br.com.solicitacao.api.dto.response.SolicitationResponse;
+import br.com.solicitacao.core.domain.enums.SolicitationStatus;
+import br.com.solicitacao.core.exception.BusinessException;
 import br.com.solicitacao.core.service.SolicitationService;
 import br.com.solicitacao.infrastructure.persistence.entity.SolicitationEntity;
 import br.com.solicitacao.infrastructure.persistence.entity.UserEntity;
+import br.com.solicitacao.infrastructure.persistence.repository.SolicitationRepository;
 import br.com.solicitacao.infrastructure.persistence.repository.UserRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -15,6 +18,10 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -31,6 +38,7 @@ import java.util.UUID;
 public class SolicitationController {
 
     private final SolicitationService solicitationService;
+    private final SolicitationRepository solicitationRepository;
     private final UserRepository userRepository;
 
     @PostMapping
@@ -40,6 +48,31 @@ public class SolicitationController {
         UUID clientId = getCurrentUserId();
         SolicitationEntity entity = solicitationService.create(clientId);
         return ResponseEntity.status(HttpStatus.CREATED).body(toResponse(entity));
+    }
+
+    @GetMapping("/my")
+    @Operation(summary = "List client's solicitations")
+    public ResponseEntity<Page<SolicitationListResponse>> listMySolicitations(
+            @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
+
+        UUID clientId = getCurrentUserId();
+        Page<SolicitationEntity> entities = solicitationRepository.findByClientId(clientId, pageable);
+        Page<SolicitationListResponse> response = entities.map(this::toListResponse);
+        return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Delete solicitation (only if DRAFT)")
+    public ResponseEntity<Void> deleteSolicitation(@PathVariable UUID id) {
+        UUID clientId = getCurrentUserId();
+        SolicitationEntity entity = solicitationService.findByIdAndClientId(id, clientId);
+
+        if (entity.getStatus() != SolicitationStatus.DRAFT) {
+            throw new BusinessException("Only draft solicitations can be deleted");
+        }
+
+        solicitationRepository.delete(entity);
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}/step1")
@@ -79,7 +112,6 @@ public class SolicitationController {
     }
 
     @PostMapping("/{id}/submit")
-    @Audit(action = "SUBMIT", entity = "SOLICITATION")
     @Operation(summary = "Submit solicitation for analysis")
     @ApiResponse(responseCode = "200", description = "Solicitation submitted successfully")
     @ApiResponse(responseCode = "400", description = "Incomplete solicitation")
@@ -105,6 +137,31 @@ public class SolicitationController {
         return userRepository.findByEmail(email)
                 .map(UserEntity::getId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
+    // ============================================
+    // RESPONSE MAPPERS
+    // ============================================
+
+    private SolicitationListResponse toListResponse(SolicitationEntity entity) {
+        String clientName = userRepository.findById(entity.getClientId())
+                .map(UserEntity::getName)
+                .orElse("Usuário não encontrado");
+
+        return SolicitationListResponse.builder()
+                .id(entity.getId())
+                .clientId(entity.getClientId())
+                .clientName(clientName)
+                .status(entity.getStatus())
+                .currentStep(entity.getCurrentStep())
+                .serviceType(entity.getServiceType())
+                .title(entity.getTitle())
+                .city(entity.getCity())
+                .state(entity.getState())
+                .priority(entity.getPriority())
+                .createdAt(entity.getCreatedAt())
+                .submittedAt(entity.getSubmittedAt())
+                .build();
     }
 
     private SolicitationResponse toResponse(SolicitationEntity entity) {

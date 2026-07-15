@@ -23,12 +23,12 @@ public class SolicitationResponse {
     private SolicitationStatus status;
     private Integer currentStep;
 
-    // Step 1 - Dados básicos
+    // Step 1
     private ServiceType serviceType;
     private String title;
     private String description;
 
-    // Step 2 - Endereço
+    // Step 2
     private String cep;
     private String number;
     private String complement;
@@ -37,7 +37,7 @@ public class SolicitationResponse {
     private String city;
     private String state;
 
-    // Step 3 - Confirmação
+    // Step 3
     private Priority priority;
     private LocalDate preferredDate;
     private BigDecimal estimatedValue;

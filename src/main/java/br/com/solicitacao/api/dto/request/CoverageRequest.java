@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @Builder
@@ -15,8 +14,6 @@ import java.util.UUID;
 @AllArgsConstructor
 public class CoverageRequest {
 
-    private UUID userId;
-
     @NotEmpty(message = "Pelo menos um estado deve ser informado")
-    private List<String> ufs;
+    private List<String> states;
 }

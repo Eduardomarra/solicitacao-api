@@ -1,5 +1,6 @@
 package br.com.solicitacao.infrastructure.persistence.repository;
 
+import br.com.solicitacao.core.domain.enums.Role;
 import br.com.solicitacao.infrastructure.persistence.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -13,4 +14,10 @@ public interface UserRepository extends JpaRepository<UserEntity, UUID> {
     Optional<UserEntity> findByEmail(String email);
 
     boolean existsByEmail(String email);
+
+    long countByRole(Role role);
+
+    long countByEnabled(boolean enabled);
+
+    long countByRoleAndEnabled(Role role, boolean enabled);
 }

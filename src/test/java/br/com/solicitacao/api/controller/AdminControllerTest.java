@@ -71,7 +71,7 @@ class AdminControllerTest {
                 .build();
 
         coverageRequest = CoverageRequest.builder()
-                .ufs(List.of("SP", "RJ"))
+                .states(List.of("SP", "RJ"))
                 .build();
 
         solicitation = SolicitationEntity.builder()
@@ -117,14 +117,14 @@ class AdminControllerTest {
     @DisplayName("Deve configurar cobertura do analista")
     void deveConfigurarCoberturaDoAnalista() {
         // Arrange
-        doNothing().when(analystService).updateCoverage(userId, coverageRequest.getUfs());
+        doNothing().when(analystService).updateCoverage(userId, coverageRequest.getStates());
 
         // Act
         ResponseEntity<Void> result = adminController.updateAnalystCoverage(userId, coverageRequest);
 
         // Assert
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        verify(analystService).updateCoverage(userId, coverageRequest.getUfs());
+        verify(analystService).updateCoverage(userId, coverageRequest.getStates());
     }
 
     @Test
