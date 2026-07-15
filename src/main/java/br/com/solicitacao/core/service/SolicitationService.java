@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -27,7 +28,7 @@ public class SolicitationService {
 
     private final SolicitationRepository solicitationRepository;
     private final ViaCepClient viaCepClient;
-    private final ElasticsearchService elasticsearchService;
+    private final Optional<ElasticsearchService> elasticsearchService; // Optional
 
     @Transactional
     public SolicitationEntity create(UUID clientId) {
@@ -41,9 +42,11 @@ public class SolicitationService {
                 .build();
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
-        elasticsearchService.indexSolicitation(saved.getId());
-
         log.info("Solicitation created with id: {}", saved.getId());
+
+        // Indexar no Elasticsearch se disponível
+        elasticsearchService.ifPresent(es -> es.indexSolicitation(saved.getId()));
+
         return saved;
     }
 
@@ -52,15 +55,12 @@ public class SolicitationService {
         log.info("=== SAVE STEP 1 ===");
         log.info("Solicitation ID: {}", id);
         log.info("ClientId: {}", clientId);
-        log.info("ServiceType: {}", request.getServiceType());
-        log.info("Title: {}", request.getTitle());
-        log.info("Description length: {}", request.getDescription().length());
 
         SolicitationEntity solicitation = findByIdAndClientId(id, clientId);
 
         if (solicitation.getStatus() != SolicitationStatus.DRAFT) {
             log.warn("Solicitation not in DRAFT status: {}", solicitation.getStatus());
-            throw new BusinessException("Não é possível editar uma solicitação que já foi enviada");
+            throw new BusinessException("Cannot edit a solicitation that has already been submitted");
         }
 
         solicitation.setServiceType(request.getServiceType());
@@ -72,8 +72,10 @@ public class SolicitationService {
         }
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
-        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Step 1 saved successfully. Current step: {}", saved.getCurrentStep());
+
+        elasticsearchService.ifPresent(es -> es.indexSolicitation(saved.getId()));
+
         return saved;
     }
 
@@ -82,39 +84,33 @@ public class SolicitationService {
         log.info("=== SAVE STEP 2 ===");
         log.info("Solicitation ID: {}", id);
         log.info("CEP: {}", request.getCep());
-        log.info("Number: {}", request.getNumber());
 
         SolicitationEntity solicitation = findByIdAndClientId(id, clientId);
 
         if (solicitation.getStatus() != SolicitationStatus.DRAFT) {
-            throw new BusinessException("Não é possível editar uma solicitação que já foi enviada");
+            throw new BusinessException("Cannot edit a solicitation that has already been submitted");
         }
 
-        // Limpar CEP
         String cepLimpo = request.getCep().replace("-", "");
         log.info("Cleaned CEP: {}", cepLimpo);
 
-        // Buscar endereço no ViaCEP
         try {
             ViaCepResponse viaCepResponse = viaCepClient.buscarCep(cepLimpo);
-            log.info("ViaCEP response: {}", viaCepResponse);
 
             if (viaCepResponse.isErro() || viaCepResponse.getCep() == null) {
                 log.error("Invalid CEP: {}", cepLimpo);
-                throw new BusinessException("CEP inválido ou não encontrado");
+                throw new BusinessException("Invalid CEP or not found");
             }
 
             solicitation.setCep(cepLimpo);
             solicitation.setNumber(request.getNumber());
             solicitation.setComplement(request.getComplement());
 
-            // Preencher com dados do ViaCEP
             solicitation.setStreet(viaCepResponse.getLogradouro());
             solicitation.setNeighborhood(viaCepResponse.getBairro());
             solicitation.setCity(viaCepResponse.getLocalidade());
             solicitation.setState(viaCepResponse.getUf());
 
-            // Sobrescrever se usuário enviou dados diferentes
             if (request.getStreet() != null && !request.getStreet().isEmpty()) {
                 solicitation.setStreet(request.getStreet());
             }
@@ -130,7 +126,7 @@ public class SolicitationService {
 
         } catch (Exception e) {
             log.error("Error fetching CEP: {}", e.getMessage(), e);
-            throw new BusinessException("Erro ao consultar CEP: " + e.getMessage());
+            throw new BusinessException("Error consulting CEP: " + e.getMessage());
         }
 
         if (isStep2Complete(solicitation)) {
@@ -140,8 +136,10 @@ public class SolicitationService {
         }
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
-        elasticsearchService.indexSolicitation(saved.getId());
-        log.info("Step 2 saved. Current step: {}, State: {}", saved.getCurrentStep(), saved.getState());
+        log.info("Step 2 saved. Current step: {}", saved.getCurrentStep());
+
+        elasticsearchService.ifPresent(es -> es.indexSolicitation(saved.getId()));
+
         return saved;
     }
 
@@ -150,20 +148,17 @@ public class SolicitationService {
         log.info("=== SAVE STEP 3 ===");
         log.info("Solicitation ID: {}", id);
         log.info("Priority: {}", request.getPriority());
-        log.info("Estimated Value: {}", request.getEstimatedValue());
-        log.info("Terms Accepted: {}", request.getTermsAccepted());
 
         SolicitationEntity solicitation = findByIdAndClientId(id, clientId);
 
         if (solicitation.getStatus() != SolicitationStatus.DRAFT) {
-            throw new BusinessException("Não é possível editar uma solicitação que já foi enviada");
+            throw new BusinessException("Cannot edit a solicitation that has already been submitted");
         }
 
-        // Validar regra: HIGH priority requer valor >= 100
         if (request.getPriority() == Priority.HIGH &&
                 request.getEstimatedValue().compareTo(new BigDecimal("100")) < 0) {
             log.warn("HIGH priority with value < 100: {}", request.getEstimatedValue());
-            throw new BusinessException("Para prioridade HIGH, o valor estimado deve ser >= 100");
+            throw new BusinessException("For HIGH priority, estimated value must be >= 100");
         }
 
         solicitation.setPriority(request.getPriority());
@@ -176,8 +171,10 @@ public class SolicitationService {
         }
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
-        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Step 3 saved. Current step: {}", saved.getCurrentStep());
+
+        elasticsearchService.ifPresent(es -> es.indexSolicitation(saved.getId()));
+
         return saved;
     }
 
@@ -190,33 +187,21 @@ public class SolicitationService {
         SolicitationEntity solicitation = findByIdAndClientId(id, clientId);
         log.info("Solicitation found: status={}, currentStep={}", solicitation.getStatus(), solicitation.getCurrentStep());
 
-        log.info("Step 1: serviceType={}, title={}", solicitation.getServiceType(), solicitation.getTitle());
-        log.info("Step 2: cep={}, number={}, street={}, neighborhood={}, city={}, state={}",
-                solicitation.getCep(), solicitation.getNumber(), solicitation.getStreet(),
-                solicitation.getNeighborhood(), solicitation.getCity(), solicitation.getState());
-        log.info("Step 3: priority={}, preferredDate={}, estimatedValue={}, termsAccepted={}",
-                solicitation.getPriority(), solicitation.getPreferredDate(),
-                solicitation.getEstimatedValue(), solicitation.getTermsAccepted());
-
         if (solicitation.getStatus() != SolicitationStatus.DRAFT) {
             log.warn("Solicitation not in DRAFT status: {}", solicitation.getStatus());
-            throw new BusinessException("Solicitação já foi enviada ou está em análise");
+            throw new BusinessException("Solicitation has already been submitted or is under review");
         }
 
-        try {
-            validateCompleteSolicitation(solicitation);
-            log.info("Validation passed successfully");
-        } catch (Exception e) {
-            log.error("Validation failed: {}", e.getMessage(), e);
-            throw e;
-        }
+        validateCompleteSolicitation(solicitation);
 
         solicitation.setStatus(SolicitationStatus.SUBMITTED);
         solicitation.setSubmittedAt(LocalDateTime.now());
 
         SolicitationEntity saved = solicitationRepository.save(solicitation);
-        elasticsearchService.indexSolicitation(saved.getId());
         log.info("Solicitation submitted successfully: id={}, status={}", saved.getId(), saved.getStatus());
+
+        elasticsearchService.ifPresent(es -> es.indexSolicitation(saved.getId()));
+
         return saved;
     }
 
@@ -226,8 +211,13 @@ public class SolicitationService {
                 .filter(s -> s.getClientId().equals(clientId))
                 .orElseThrow(() -> {
                     log.error("Solicitation not found: id={}, clientId={}", id, clientId);
-                    return new ResourceNotFoundException("Solicitação não encontrada");
+                    return new ResourceNotFoundException("Solicitation not found");
                 });
+    }
+
+    public SolicitationEntity findById(UUID id) {
+        return solicitationRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Solicitation not found"));
     }
 
     private boolean isStep2Complete(SolicitationEntity solicitation) {
@@ -252,43 +242,36 @@ public class SolicitationService {
         // Step 1
         if (solicitation.getServiceType() == null) {
             log.error("Step 1 incomplete: serviceType is null");
-            throw new BusinessException("Step 1 incompleto: Tipo de serviço obrigatório");
+            throw new BusinessException("Step 1 incomplete: Service type is required");
         }
         if (solicitation.getTitle() == null || solicitation.getTitle().length() < 3) {
-            log.error("Step 1 incomplete: title is null or too short: {}", solicitation.getTitle());
-            throw new BusinessException("Step 1 incompleto: Título deve ter entre 3 e 80 caracteres");
+            log.error("Step 1 incomplete: title is null or too short");
+            throw new BusinessException("Step 1 incomplete: Title must be between 3 and 80 characters");
         }
         if (solicitation.getDescription() == null || solicitation.getDescription().length() < 20) {
-            log.error("Step 1 incomplete: description is null or too short: length={}",
-                    solicitation.getDescription() != null ? solicitation.getDescription().length() : 0);
-            throw new BusinessException("Step 1 incompleto: Descrição deve ter entre 20 e 1000 caracteres");
+            log.error("Step 1 incomplete: description is null or too short");
+            throw new BusinessException("Step 1 incomplete: Description must be between 20 and 1000 characters");
         }
 
         // Step 2
         if (!isStep2Complete(solicitation)) {
             log.error("Step 2 incomplete");
-            throw new BusinessException("Step 2 incompleto: Endereço não está totalmente preenchido");
+            throw new BusinessException("Step 2 incomplete: Address is not fully filled");
         }
 
         // Step 3
         if (!isStep3Complete(solicitation)) {
             log.error("Step 3 incomplete");
-            throw new BusinessException("Step 3 incompleto: Dados de confirmação não estão totalmente preenchidos");
+            throw new BusinessException("Step 3 incomplete: Confirmation data is not fully filled");
         }
 
         // Regra adicional: HIGH priority requer valor >= 100
         if (solicitation.getPriority() == Priority.HIGH &&
                 solicitation.getEstimatedValue().compareTo(new BigDecimal("100")) < 0) {
             log.error("HIGH priority requires value >= 100, but got: {}", solicitation.getEstimatedValue());
-            throw new BusinessException("Para prioridade HIGH, o valor estimado deve ser >= 100");
+            throw new BusinessException("For HIGH priority, estimated value must be >= 100");
         }
 
         log.info("Validation completed successfully");
-    }
-
-    public SolicitationEntity findById(UUID id) {
-        log.info("Buscando solicitação por ID: {}", id);
-        return solicitationRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Solicitação não encontrada"));
     }
 }

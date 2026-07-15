@@ -10204,3 +10204,1631 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
 	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-14 19:15:13.518 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:15:13.560 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 8144 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:15:13.560 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:15:13.561 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:15:13.614 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:15:13.614 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:15:14.329 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:15:14.329 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:15:14.370 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:15:14.371 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:15:14.371 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-14 19:15:14.377 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 1 Elasticsearch repository interface.
+2026-07-14 19:15:14.893 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a1d6b3c-2d97-39b2-b7a4-a8c794ca7e32
+2026-07-14 19:15:15.578 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:15:15.584 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:15:15.586 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:15:15.586 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:15:15.649 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:15:15.650 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2035 ms
+2026-07-14 19:15:15.792 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:15:15.950 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:15:15.951 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:15:15.959 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:15:16.137 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:15:16.189 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:15:16.221 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:15:16.418 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:15:16.457 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:15:17.184 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:15:17.198 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:15:17.203 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:15:17.203 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:15:17.203 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:15:17.207 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:15:17.212 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:15:17.214 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:15:17.221 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:15:17.226 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:15:17.578 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:15:18.168 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:15:18.242 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:15:18.295 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:15:18.742 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+2026-07-14 19:15:18.744 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:265)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:144)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-07-14 19:15:18.746 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:15:18.747 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:15:18.748 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:15:18.749 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:15:18.750 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:15:18.754 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:15:18.754 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:15:18.755 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 19:15:18.756 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-14 19:15:18.771 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-14 19:15:18.792 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:571)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:571)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:536)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory.getTargetRepository(ElasticsearchRepositoryFactory.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactoryBean.afterPropertiesSet(ElasticsearchRepositoryFactoryBean.java:69)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	... 61 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateExceptionIfPossible(ElasticsearchExceptionTranslator.java:110)
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:64)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:73)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.doExists(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.exists(IndicesTemplate.java:169)
+	at org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository.<init>(SimpleElasticsearchRepository.java:85)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 74 common frames omitted
+Caused by: java.lang.RuntimeException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:63)
+	... 82 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:930)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:300)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:288)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient.performRequest(RestClientHttpClient.java:91)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.performRequest(ElasticsearchTransportBase.java:137)
+	at co.elastic.clients.elasticsearch.indices.ElasticsearchIndicesClient.exists(ElasticsearchIndicesClient.java:655)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.lambda$doExists$2(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:71)
+	... 81 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-14 19:17:55.320 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:17:55.360 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 9040 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:17:55.361 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:17:55.362 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:17:55.413 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:17:55.413 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:17:56.123 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:17:56.123 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:17:56.165 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:17:56.166 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:17:56.166 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-14 19:17:56.172 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 1 Elasticsearch repository interface.
+2026-07-14 19:17:56.681 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a1d6b3c-2d97-39b2-b7a4-a8c794ca7e32
+2026-07-14 19:17:57.356 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:17:57.363 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:17:57.364 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:17:57.365 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:17:57.426 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:17:57.427 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2013 ms
+2026-07-14 19:17:57.567 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:17:57.721 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:17:57.723 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:17:57.731 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:17:57.907 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:17:57.958 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:17:57.989 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:17:58.185 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:17:58.224 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:17:58.941 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:17:58.955 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:17:58.958 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:17:58.959 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:17:58.959 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:17:58.963 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:17:58.968 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:17:58.969 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:17:58.975 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:17:58.980 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:17:59.327 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:17:59.905 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:17:59.974 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:18:00.026 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:18:00.463 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+2026-07-14 19:18:00.465 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:265)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:144)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-07-14 19:18:00.467 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:18:00.468 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:18:00.469 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:18:00.469 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:18:00.470 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:18:00.474 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:18:00.474 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:18:00.475 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 19:18:00.475 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-14 19:18:00.492 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-14 19:18:00.511 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:571)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:571)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:536)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory.getTargetRepository(ElasticsearchRepositoryFactory.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactoryBean.afterPropertiesSet(ElasticsearchRepositoryFactoryBean.java:69)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	... 61 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateExceptionIfPossible(ElasticsearchExceptionTranslator.java:110)
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:64)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:73)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.doExists(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.exists(IndicesTemplate.java:169)
+	at org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository.<init>(SimpleElasticsearchRepository.java:85)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 74 common frames omitted
+Caused by: java.lang.RuntimeException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:63)
+	... 82 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:930)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:300)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:288)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient.performRequest(RestClientHttpClient.java:91)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.performRequest(ElasticsearchTransportBase.java:137)
+	at co.elastic.clients.elasticsearch.indices.ElasticsearchIndicesClient.exists(ElasticsearchIndicesClient.java:655)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.lambda$doExists$2(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:71)
+	... 81 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-14 19:20:10.864 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:20:10.907 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 8968 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:20:10.907 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:20:10.907 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:20:10.959 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:20:10.959 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:20:11.670 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:20:11.670 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:20:11.712 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:20:11.713 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:20:11.713 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-07-14 19:20:11.719 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 1 Elasticsearch repository interface.
+2026-07-14 19:20:12.237 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a1d6b3c-2d97-39b2-b7a4-a8c794ca7e32
+2026-07-14 19:20:12.910 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:20:12.917 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:20:12.918 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:20:12.919 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:20:12.984 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:20:12.985 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2024 ms
+2026-07-14 19:20:13.124 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:20:13.278 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:20:13.279 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:20:13.287 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:20:13.460 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:20:13.511 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:20:13.549 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:20:13.748 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:20:13.786 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:20:14.508 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:20:14.521 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:20:14.526 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:20:14.526 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:20:14.527 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:20:14.531 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:20:14.535 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:20:14.537 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:20:14.541 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:20:14.547 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:20:14.901 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:20:15.473 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:20:15.556 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:20:15.605 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:20:16.046 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+2026-07-14 19:20:16.047 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:265)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:144)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-07-14 19:20:16.050 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:20:16.050 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:20:16.051 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:20:16.052 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:20:16.053 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:20:16.057 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:20:16.057 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:20:16.058 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 19:20:16.059 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-14 19:20:16.074 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-14 19:20:16.094 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$2.resolveCandidate(DefaultListableBeanFactory.java:1925)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.createOptionalDependency(DefaultListableBeanFactory.java:1928)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'solicitationElasticsearchRepository' defined in br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository defined in @EnableElasticsearchRepositories declared on SolicitacaoApplication: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 52 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:571)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:571)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:536)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory.getTargetRepository(ElasticsearchRepositoryFactory.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactoryBean.afterPropertiesSet(ElasticsearchRepositoryFactoryBean.java:69)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	... 63 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateExceptionIfPossible(ElasticsearchExceptionTranslator.java:110)
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:64)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:73)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.doExists(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.exists(IndicesTemplate.java:169)
+	at org.springframework.data.elasticsearch.repository.support.SimpleElasticsearchRepository.<init>(SimpleElasticsearchRepository.java:85)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 76 common frames omitted
+Caused by: java.lang.RuntimeException: Connection refused: getsockopt
+	at org.springframework.data.elasticsearch.client.elc.ElasticsearchExceptionTranslator.translateException(ElasticsearchExceptionTranslator.java:63)
+	... 84 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:930)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:300)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:288)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient.performRequest(RestClientHttpClient.java:91)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.performRequest(ElasticsearchTransportBase.java:137)
+	at co.elastic.clients.elasticsearch.indices.ElasticsearchIndicesClient.exists(ElasticsearchIndicesClient.java:655)
+	at org.springframework.data.elasticsearch.client.elc.IndicesTemplate.lambda$doExists$2(IndicesTemplate.java:177)
+	at org.springframework.data.elasticsearch.client.elc.ChildTemplate.execute(ChildTemplate.java:71)
+	... 83 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-14 19:26:41.257 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:26:41.298 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 22968 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:26:41.299 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:26:41.299 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:26:41.349 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:26:41.349 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:26:42.059 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:26:42.059 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:26:42.100 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:26:42.608 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5dd58582-07c7-36cd-824c-22fce412b197
+2026-07-14 19:26:43.286 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:26:43.293 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:26:43.294 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:26:43.295 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:26:43.359 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:26:43.360 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2011 ms
+2026-07-14 19:26:43.497 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:26:43.649 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:26:43.650 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:26:43.659 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:26:43.833 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:26:43.884 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:26:43.921 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:26:44.122 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:26:44.160 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:26:44.884 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:26:44.898 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:26:44.901 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:26:44.902 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:26:44.902 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:26:44.906 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:26:44.910 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:26:44.912 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:26:44.919 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:26:44.924 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:26:45.278 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:26:45.859 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:26:45.924 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:26:45.973 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:26:46.010 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'solicitationService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\SolicitationService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'elasticsearchService' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\core\service\ElasticsearchService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-14 19:26:46.011 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:265)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:144)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-07-14 19:26:46.013 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:26:46.014 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:26:46.015 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:26:46.016 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:26:46.016 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:26:46.021 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:26:46.022 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:26:46.023 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 19:26:46.023 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-14 19:26:46.042 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-14 19:26:46.065 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.solicitacao.core.service.ElasticsearchService required a bean of type 'br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.solicitacao.infrastructure.elasticsearch.repository.SolicitationElasticsearchRepository' in your configuration.
+
+2026-07-14 19:28:43.910 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:28:43.952 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 13304 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:28:43.953 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:28:43.953 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:28:44.002 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:28:44.002 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:28:44.712 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:28:44.712 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:28:44.752 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:28:45.262 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a6c0120-f551-383e-983f-c910f718c366
+2026-07-14 19:28:45.935 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:28:45.942 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:28:45.944 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:28:45.944 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:28:46.013 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:28:46.014 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2011 ms
+2026-07-14 19:28:46.163 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:28:46.315 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:28:46.316 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:28:46.324 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:28:46.493 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:28:46.551 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:28:46.583 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:28:46.778 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:28:46.817 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:28:47.534 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:28:47.548 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:28:47.552 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:28:47.552 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:28:47.552 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:28:47.556 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:28:47.561 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:28:47.562 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:28:47.567 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:28:47.573 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:28:47.922 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:28:48.489 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:28:48.553 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:28:48.600 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:28:48.659 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'analystController' defined in file [C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes\br\com\solicitacao\api\controller\AnalystController.class]: Unsatisfied dependency expressed through constructor parameter 3: No qualifying bean of type 'br.com.solicitacao.core.service.ElasticsearchService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-14 19:28:48.660 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'applicationTaskExecutor': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:265)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:144)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:113)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at br.com.solicitacao.SolicitacaoApplication.main(SolicitacaoApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2026-07-14 19:28:48.662 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:28:48.663 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:28:48.664 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:28:48.665 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:28:48.665 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:28:48.669 [restartedMain] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:28:48.670 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:28:48.671 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 19:28:48.672 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-14 19:28:48.686 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-14 19:28:48.710 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 3 of constructor in br.com.solicitacao.api.controller.AnalystController required a bean of type 'br.com.solicitacao.core.service.ElasticsearchService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.solicitacao.core.service.ElasticsearchService' in your configuration.
+
+2026-07-14 19:30:05.711 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:30:05.755 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 3848 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:30:05.755 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:30:05.756 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:30:05.806 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:30:05.806 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:30:06.511 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:30:06.512 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:30:06.552 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:30:07.062 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a6c0120-f551-383e-983f-c910f718c366
+2026-07-14 19:30:07.734 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:30:07.741 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:30:07.743 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:30:07.743 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:30:07.808 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:30:07.808 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2002 ms
+2026-07-14 19:30:07.945 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:30:08.099 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:30:08.100 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:30:08.108 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:30:08.278 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:30:08.335 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:30:08.367 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:30:08.563 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:30:08.600 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:30:09.321 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:30:09.336 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:30:09.339 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:30:09.340 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:30:09.340 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:30:09.344 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:30:09.349 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:30:09.351 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:30:09.356 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:30:09.361 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:30:09.715 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:30:10.285 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:30:10.350 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:30:10.399 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:30:10.835 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2fabdaeb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7900f131, org.springframework.security.web.context.SecurityContextHolderFilter@2f1031da, org.springframework.security.web.header.HeaderWriterFilter@473ad95e, org.springframework.web.filter.CorsFilter@bbd713, org.springframework.security.web.authentication.logout.LogoutFilter@3a14a9e6, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@6946e30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49776704, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@434a4465, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27c4861f, org.springframework.security.web.session.SessionManagementFilter@780e7d2a, org.springframework.security.web.access.ExceptionTranslationFilter@4c5a7bc3, org.springframework.security.web.access.intercept.AuthorizationFilter@1ead3c2d]
+2026-07-14 19:30:11.912 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:30:11.925 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-07-14 19:30:11.942 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Started SolicitacaoApplication in 6.703 seconds (process running for 7.16)
+2026-07-14 19:30:39.210 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console
+2026-07-14 19:30:39.224 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/h2-console' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-14 19:30:39.246 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:39.251 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console
+2026-07-14 19:30:39.251 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/
+2026-07-14 19:30:39.261 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:39.261 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/
+2026-07-14 19:30:39.424 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-14 19:30:39.426 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:39.427 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-14 19:30:39.502 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/login.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:39.506 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:39.507 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/login.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:39.589 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/background.gif
+2026-07-14 19:30:39.589 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:39.589 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/background.gif
+2026-07-14 19:30:41.513 [http-nio-8080-exec-6] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14 19:30:41.513 [http-nio-8080-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-14 19:30:41.515 [http-nio-8080-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-14 19:30:41.516 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-07-14 19:30:41.518 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:41.519 [http-nio-8080-exec-6] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/swagger-ui/swagger-initializer.js' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-14 19:30:41.524 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-07-14 19:30:41.581 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css.map
+2026-07-14 19:30:41.583 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:41.585 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css.map
+2026-07-14 19:30:41.814 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js.map
+2026-07-14 19:30:41.815 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:41.817 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js.map
+2026-07-14 19:30:41.919 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-07-14 19:30:41.922 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:41.925 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-07-14 19:30:41.927 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-07-14 19:30:41.930 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:41.934 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-07-14 19:30:41.998 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-07-14 19:30:42.000 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:42.002 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-07-14 19:30:42.027 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js.map
+2026-07-14 19:30:42.027 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:42.027 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js.map
+2026-07-14 19:30:42.606 [http-nio-8080-exec-2] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 586 ms
+2026-07-14 19:30:52.869 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /h2-console/login.do?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.872 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:52.872 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /h2-console/login.do?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.922 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tables.do?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.923 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/header.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.924 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/query.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.924 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:52.924 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:52.925 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/help.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.925 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/header.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.925 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tables.do?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.925 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:52.925 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:52.925 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/query.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.926 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/help.jsp?jsessionid=b73f8c2b63da715a20d892c04d182ff2
+2026-07-14 19:30:52.926 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/stylesheet.css
+2026-07-14 19:30:52.927 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:52.927 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/stylesheet.css
+2026-07-14 19:30:53.148 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_refresh.gif
+2026-07-14 19:30:53.148 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_rollback.gif
+2026-07-14 19:30:53.148 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_line.gif
+2026-07-14 19:30:53.148 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_disconnect.gif
+2026-07-14 19:30:53.148 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_commit.gif
+2026-07-14 19:30:53.150 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.150 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.150 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.150 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.150 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.151 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_refresh.gif
+2026-07-14 19:30:53.151 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_disconnect.gif
+2026-07-14 19:30:53.151 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_rollback.gif
+2026-07-14 19:30:53.152 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_help.gif
+2026-07-14 19:30:53.152 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_commit.gif
+2026-07-14 19:30:53.152 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_line.gif
+2026-07-14 19:30:53.154 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.156 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_help.gif
+2026-07-14 19:30:53.186 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_run.gif
+2026-07-14 19:30:53.186 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_history.gif
+2026-07-14 19:30:53.186 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree.js
+2026-07-14 19:30:53.188 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.188 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.189 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.189 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree.js
+2026-07-14 19:30:53.189 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_run.gif
+2026-07-14 19:30:53.189 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_history.gif
+2026-07-14 19:30:53.189 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_run_selected.gif
+2026-07-14 19:30:53.190 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.191 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_run_selected.gif
+2026-07-14 19:30:53.229 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/icon_stop.gif
+2026-07-14 19:30:53.230 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.231 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/icon_stop.gif
+2026-07-14 19:30:53.292 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_minus.gif
+2026-07-14 19:30:53.293 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_plus.gif
+2026-07-14 19:30:53.293 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_database.gif
+2026-07-14 19:30:53.294 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.295 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.295 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_minus.gif
+2026-07-14 19:30:53.295 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.296 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_database.gif
+2026-07-14 19:30:53.296 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_plus.gif
+2026-07-14 19:30:53.307 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_table.gif
+2026-07-14 19:30:53.307 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_type.gif
+2026-07-14 19:30:53.307 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_column.gif
+2026-07-14 19:30:53.307 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_empty.gif
+2026-07-14 19:30:53.307 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_index.gif
+2026-07-14 19:30:53.307 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_index_az.gif
+2026-07-14 19:30:53.308 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.308 [http-nio-8080-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.308 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.309 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.309 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.309 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.309 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_column.gif
+2026-07-14 19:30:53.309 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_type.gif
+2026-07-14 19:30:53.309 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_table.gif
+2026-07-14 19:30:53.309 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_empty.gif
+2026-07-14 19:30:53.309 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_index.gif
+2026-07-14 19:30:53.309 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_index_az.gif
+2026-07-14 19:30:53.315 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_view.gif
+2026-07-14 19:30:53.315 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_folder.gif
+2026-07-14 19:30:53.317 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.317 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.318 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_view.gif
+2026-07-14 19:30:53.318 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_folder.gif
+2026-07-14 19:30:53.319 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_users.gif
+2026-07-14 19:30:53.320 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_user.gif
+2026-07-14 19:30:53.320 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /h2-console/tree_info.gif
+2026-07-14 19:30:53.320 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.321 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_users.gif
+2026-07-14 19:30:53.321 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.321 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-14 19:30:53.322 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_user.gif
+2026-07-14 19:30:53.322 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /h2-console/tree_info.gif
+2026-07-14 19:36:19.816 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:36:19.817 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:36:19.818 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:36:19.818 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:36:19.819 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:36:19.824 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:36:19.824 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:36:19.825 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 19:36:39.210 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 19:36:39.251 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 8856 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 19:36:39.251 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 19:36:39.252 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 19:36:39.302 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 19:36:39.302 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 19:36:40.037 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 19:36:40.038 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 19:36:40.080 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2026-07-14 19:36:40.631 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a6c0120-f551-383e-983f-c910f718c366
+2026-07-14 19:36:41.353 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 19:36:41.360 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:36:41.362 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 19:36:41.362 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 19:36:41.433 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 19:36:41.434 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2132 ms
+2026-07-14 19:36:41.572 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 19:36:41.724 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 19:36:41.726 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 19:36:41.734 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 19:36:41.903 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 19:36:41.959 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 19:36:41.990 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 19:36:42.187 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 19:36:42.226 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 19:36:42.983 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 19:36:42.998 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:36:43.001 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:36:43.002 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:36:43.002 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:36:43.005 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 19:36:43.011 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 19:36:43.012 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 19:36:43.018 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 19:36:43.022 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:36:43.372 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 19:36:43.943 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 19:36:44.009 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 19:36:44.059 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 19:36:44.471 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ba5ade4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@516f28c2, org.springframework.security.web.context.SecurityContextHolderFilter@14977c4a, org.springframework.security.web.header.HeaderWriterFilter@49776704, org.springframework.web.filter.CorsFilter@288497bf, org.springframework.security.web.authentication.logout.LogoutFilter@6debc2b2, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@32b5b719, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5842bbf1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56c79169, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72986ab3, org.springframework.security.web.session.SessionManagementFilter@2e9e59ad, org.springframework.security.web.access.ExceptionTranslationFilter@3ce5a172, org.springframework.security.web.access.intercept.AuthorizationFilter@3114fb52]
+2026-07-14 19:36:45.508 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-14 19:36:45.516 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-07-14 19:36:45.535 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Started SolicitacaoApplication in 6.876 seconds (process running for 7.343)
+2026-07-14 19:36:52.831 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 19:36:52.831 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 19:36:52.832 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 19:36:52.833 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 19:36:52.834 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 19:36:52.837 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 19:36:52.838 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 19:36:52.840 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-14 21:26:39.973 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-14 21:26:40.011 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 23268 (C:\Users\User\Desktop\solicitacao-api\solicitacao-api\target\classes started by User in C:\Users\User\Desktop\solicitacao-api\solicitacao-api)
+2026-07-14 21:26:40.012 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-14 21:26:40.012 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-14 21:26:40.061 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14 21:26:40.062 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14 21:26:40.892 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 21:26:40.892 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14 21:26:40.941 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
+2026-07-14 21:26:41.520 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7f24bbb6-d897-3330-900a-bab2725ee3bc
+2026-07-14 21:26:42.260 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-14 21:26:42.271 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-14 21:26:42.273 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 21:26:42.273 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-14 21:26:42.343 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-14 21:26:42.343 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2281 ms
+2026-07-14 21:26:42.479 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-14 21:26:42.671 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-14 21:26:42.672 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-14 21:26:42.681 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-14 21:26:42.871 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-14 21:26:42.944 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-14 21:26:42.983 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-14 21:26:43.228 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14 21:26:43.275 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-14 21:26:44.085 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14 21:26:44.100 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 21:26:44.104 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 21:26:44.104 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 21:26:44.104 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 21:26:44.108 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-14 21:26:44.113 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-14 21:26:44.114 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-14 21:26:44.119 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-14 21:26:44.124 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 21:26:44.524 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-14 21:26:45.105 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-14 21:26:45.172 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14 21:26:45.251 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-14 21:26:45.683 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6676a370, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1aa01c56, org.springframework.security.web.context.SecurityContextHolderFilter@37cd97a2, org.springframework.security.web.header.HeaderWriterFilter@6da6be15, org.springframework.web.filter.CorsFilter@528cd16a, org.springframework.security.web.authentication.logout.LogoutFilter@1a560a52, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@53db4e68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57adcd25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58de4056, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e8c4bbd, org.springframework.security.web.session.SessionManagementFilter@25bebf6, org.springframework.security.web.access.ExceptionTranslationFilter@3b1e1cf0, org.springframework.security.web.access.intercept.AuthorizationFilter@16677b3c]
+2026-07-14 21:26:46.897 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-14 21:26:46.907 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-07-14 21:26:46.924 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Started SolicitacaoApplication in 7.479 seconds (process running for 8.403)
+2026-07-14 21:26:47.280 [RMI TCP Connection(3)-172.27.48.1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14 21:26:47.280 [RMI TCP Connection(3)-172.27.48.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-14 21:26:47.281 [RMI TCP Connection(3)-172.27.48.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-14 21:26:52.531 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14 21:26:52.531 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-14 21:26:52.533 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-14 21:26:52.533 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-14 21:26:52.533 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-14 21:26:52.538 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-14 21:26:52.539 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-14 21:26:52.540 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

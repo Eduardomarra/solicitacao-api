@@ -35,9 +35,10 @@ services:
       - solicitacao-network
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9200/_cluster/health"]
-      interval: 30s
+      interval: 10s
       timeout: 10s
-      retries: 5
+      retries: 10
+      start_period: 30s
 
   app:
     build:
@@ -52,6 +53,7 @@ services:
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: 123456
       SPRING_DATA_ELASTICSEARCH_URIS: http://elasticsearch:9200
+      SPRING_ELASTICSEARCH_URIS: http://elasticsearch:9200
       JWT_SECRET: qU8sK2pL5xR9mZ7cW3vA4nY6bT1gH0jF
     depends_on:
       postgres:
@@ -61,6 +63,11 @@ services:
     networks:
       - solicitacao-network
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
 volumes:
   postgres_data:

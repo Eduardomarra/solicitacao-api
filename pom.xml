@@ -59,11 +59,14 @@
         </dependency>
 
         <!-- Database -->
+        <!-- H2 Database (para desenvolvimento local) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- PostgreSQL (para produção/Docker) -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

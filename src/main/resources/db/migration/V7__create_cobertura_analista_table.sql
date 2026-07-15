@@ -8,17 +8,17 @@
 --
 -- -- Índice para performance
 -- CREATE INDEX idx_cobertura_analista_usuario_id ON cobertura_analista(usuario_id);
-
-
-
--- Tabela de cobertura do analista (H2 compatible)
-CREATE TABLE IF NOT EXISTS analyst_coverage (
-                                                id UUID DEFAULT RANDOM_UUID() PRIMARY KEY,
-    user_id UUID NOT NULL,
-    state VARCHAR(2) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    UNIQUE(user_id, state)
-    );
-
--- Índice para performance
-CREATE INDEX IF NOT EXISTS idx_analyst_coverage_user_id ON analyst_coverage(user_id);
+--
+-- --
+-- --
+-- -- -- Tabela de cobertura do analista (H2 compatible)
+-- -- CREATE TABLE IF NOT EXISTS analyst_coverage (
+-- --                                                 id UUID DEFAULT RANDOM_UUID() PRIMARY KEY,
+-- --     user_id UUID NOT NULL,
+-- --     state VARCHAR(2) NOT NULL,
+-- --     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+-- --     UNIQUE(user_id, state)
+-- --     );
+-- --
+-- -- -- Índice para performance
+-- -- CREATE INDEX IF NOT EXISTS idx_analyst_coverage_user_id ON analyst_coverage(user_id);

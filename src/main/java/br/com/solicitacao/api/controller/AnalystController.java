@@ -1,16 +1,10 @@
 package br.com.solicitacao.api.controller;
 
-import br.com.solicitacao.api.annotation.Audit;
 import br.com.solicitacao.api.dto.request.AnalystDecisionRequest;
 import br.com.solicitacao.api.dto.response.SolicitationListResponse;
 import br.com.solicitacao.api.dto.response.SolicitationResponse;
-import br.com.solicitacao.core.domain.enums.Priority;
-import br.com.solicitacao.core.domain.enums.ServiceType;
 import br.com.solicitacao.core.domain.enums.SolicitationStatus;
 import br.com.solicitacao.core.service.AnalystService;
-import br.com.solicitacao.core.service.ElasticsearchService;
-import br.com.solicitacao.core.service.SolicitationService;
-import br.com.solicitacao.infrastructure.elasticsearch.document.SolicitationDocument;
 import br.com.solicitacao.infrastructure.persistence.entity.SolicitationEntity;
 import br.com.solicitacao.infrastructure.persistence.entity.UserEntity;
 import br.com.solicitacao.infrastructure.persistence.repository.UserRepository;
@@ -24,14 +18,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Slf4j
@@ -43,9 +34,8 @@ import java.util.UUID;
 public class AnalystController {
 
     private final AnalystService analystService;
-    private final SolicitationService solicitationService;
     private final UserRepository userRepository;
-    private final ElasticsearchService elasticsearchService;
+    // ElasticsearchService removido
 
     @GetMapping
     @Operation(summary = "List solicitations for analysis (filtered by state)")
@@ -54,7 +44,11 @@ public class AnalystController {
             @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
 
         UUID analystId = getCurrentUserId();
+        log.info("=== LISTING SOLICITATIONS ===");
+        log.info("Analyst ID: {}", analystId);
+
         Page<SolicitationListResponse> solicitations = analystService.listSolicitationsForAnalyst(analystId, status, pageable);
+        log.info("Total solicitations found: {}", solicitations.getTotalElements());
 
         return ResponseEntity.ok(solicitations);
     }
@@ -68,7 +62,6 @@ public class AnalystController {
     }
 
     @PostMapping("/{id}/start")
-    @Audit(action = "START_ANALYSIS", entity = "SOLICITATION")
     @Operation(summary = "Start analysis (SUBMITTED → IN_REVIEW)")
     public ResponseEntity<SolicitationResponse> startAnalysis(@PathVariable UUID id) {
         log.info("=== START ANALYSIS ===");
@@ -84,7 +77,6 @@ public class AnalystController {
     }
 
     @PostMapping("/{id}/decide")
-    @Audit(action = "DECIDE", entity = "SOLICITATION")
     @Operation(summary = "Decide solicitation (APPROVE or REJECT)")
     public ResponseEntity<SolicitationResponse> decide(
             @PathVariable UUID id,
@@ -102,6 +94,25 @@ public class AnalystController {
 
         return ResponseEntity.ok(toResponse(entity));
     }
+
+    // ============================================
+    // ENDPOINT DE BUSCA - COMENTADO TEMPORARIAMENTE
+    // ============================================
+    /*
+    @GetMapping("/search")
+    @Operation(summary = "Search solicitations with filters (Analyst only)")
+    public ResponseEntity<Page<SolicitationDocument>> searchSolicitations(
+            @RequestParam(required = false) String text,
+            @RequestParam(required = false) List<SolicitationStatus> statuses,
+            @RequestParam(required = false) List<String> states,
+            @RequestParam(required = false) ServiceType serviceType,
+            @RequestParam(required = false) Priority priority,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dateFrom,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dateTo,
+            @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
+        // Implementação com Elasticsearch
+    }
+    */
 
     private UUID getCurrentUserId() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -140,61 +151,5 @@ public class AnalystController {
                 .analyzedBy(entity.getAnalyzedBy())
                 .analysisComment(entity.getAnalysisComment())
                 .build();
-    }
-
-    @GetMapping("/search")
-    @Operation(summary = "Search solicitations with filters (Analyst only)")
-    public ResponseEntity<Page<SolicitationDocument>> searchSolicitations(
-            @RequestParam(required = false) String text,
-            @RequestParam(required = false) List<SolicitationStatus> statuses,
-            @RequestParam(required = false) List<String> states,
-            @RequestParam(required = false) ServiceType serviceType,
-            @RequestParam(required = false) Priority priority,
-            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dateFrom,
-            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dateTo,
-            @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
-
-        UUID analystId = getCurrentUserId();
-        log.info("=== SEARCH SOLICITATIONS ===");
-        log.info("Analyst ID: {}", analystId);
-        log.info("Text: {}, Statuses: {}, States: {}", text, statuses, states);
-
-        // Buscar estados cobertos pelo analista
-        List<String> analystStates = analystService.getAnalystStates(analystId);
-        log.info("Analyst states: {}", analystStates);
-
-        if (analystStates.isEmpty()) {
-            log.warn("Analista não possui cobertura de estados!");
-            return ResponseEntity.ok(Page.empty(pageable));
-        }
-
-        // Forçar estados do analista
-        List<String> finalStates = states != null && !states.isEmpty()
-                ? states.stream().filter(analystStates::contains).toList()
-                : analystStates;
-
-        if (finalStates.isEmpty()) {
-            log.warn("Nenhum estado válido para o analista!");
-            return ResponseEntity.ok(Page.empty(pageable));
-        }
-
-        // Se statuses for vazio, usar SUBMITTED e IN_REVIEW por padrão
-        List<SolicitationStatus> finalStatuses = statuses != null && !statuses.isEmpty()
-                ? statuses
-                : List.of(SolicitationStatus.SUBMITTED, SolicitationStatus.IN_REVIEW);
-
-        Page<SolicitationDocument> result = elasticsearchService.searchSolicitations(
-                text,
-                finalStatuses,
-                finalStates,
-                serviceType,
-                priority,
-                dateFrom,
-                dateTo,
-                pageable
-        );
-
-        log.info("Resultados encontrados: {}", result.getTotalElements());
-        return ResponseEntity.ok(result);
     }
 }
