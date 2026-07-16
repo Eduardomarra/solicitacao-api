@@ -78,14 +78,20 @@ public class AnalystService {
 
         if (states.isEmpty()) {
             log.warn("Analista não possui cobertura de estados! ID: {}", analystId);
-            return Page.empty(pageable);  // Retorna página vazia em vez de lançar exceção
+            return Page.empty(pageable);
         }
 
-        SolicitationStatus statusFilter = status != null ? status : SolicitationStatus.SUBMITTED;
-        log.info("Status filtro: {}", statusFilter);
+        Page<SolicitationEntity> entities;
 
-        Page<SolicitationEntity> entities = solicitationRepository
-                .findByStateInAndStatus(states, statusFilter, pageable);
+        if (status != null) {
+            // Buscar com status específico
+            log.info("Buscando com status: {}", status);
+            entities = solicitationRepository.findByStateInAndStatus(states, status, pageable);
+        } else {
+            // Buscar todos (exceto DRAFT)
+            log.info("Buscando todos os status (exceto DRAFT)");
+            entities = solicitationRepository.findByStateInAndStatusNot(states, SolicitationStatus.DRAFT, pageable);
+        }
 
         log.info("Total de solicitações encontradas: {}", entities.getTotalElements());
         return entities.map(this::toListResponse);

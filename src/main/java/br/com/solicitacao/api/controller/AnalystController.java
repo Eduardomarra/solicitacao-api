@@ -44,11 +44,11 @@ public class AnalystController {
             @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
 
         UUID analystId = getCurrentUserId();
-        log.info("=== LISTING SOLICITATIONS ===");
+        log.info("=== LISTANDO SOLICITAÇÕES PARA ANALISTA ===");
         log.info("Analyst ID: {}", analystId);
 
         Page<SolicitationListResponse> solicitations = analystService.listSolicitationsForAnalyst(analystId, status, pageable);
-        log.info("Total solicitations found: {}", solicitations.getTotalElements());
+        log.info("Total de solicitações encontradas: {}", solicitations.getTotalElements());
 
         return ResponseEntity.ok(solicitations);
     }
