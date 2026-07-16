@@ -9,8 +9,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
-
 @Slf4j
 @Component
 @RequiredArgsConstructor
@@ -23,21 +21,23 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) {
         log.info("=== INICIALIZANDO DADOS ===");
         createAdminUser();
+        createAnalystUser();
+        createClientUsers();
         log.info("=== DADOS INICIALIZADOS COM SUCESSO ===");
     }
 
     private void createAdminUser() {
         String adminEmail = "admin@email.com";
 
-        // Verificar se o admin já existe
         if (userRepository.findByEmail(adminEmail).isPresent()) {
             log.info("Admin já existe: {}", adminEmail);
             return;
         }
 
-        // Criar admin com senha fixa
         String adminPassword = "admin123";
         String passwordHash = passwordEncoder.encode(adminPassword);
+
+        log.info("Hash gerado para admin: {}", passwordHash);
 
         UserEntity admin = UserEntity.builder()
                 .name("Administrador")
@@ -45,13 +45,69 @@ public class DataInitializer implements CommandLineRunner {
                 .passwordHash(passwordHash)
                 .role(Role.ADMIN)
                 .enabled(true)
-                .createdAt(LocalDateTime.now())
                 .build();
 
         userRepository.save(admin);
         log.info("✅ Admin criado com sucesso!");
         log.info("   Email: {}", adminEmail);
         log.info("   Senha: {}", adminPassword);
-        log.info("   Role: {}", Role.ADMIN);
+    }
+
+    private void createAnalystUser() {
+        String analystEmail = "analyst@email.com";
+
+        if (userRepository.findByEmail(analystEmail).isPresent()) {
+            log.info("Analyst já existe: {}", analystEmail);
+            return;
+        }
+
+        String analystPassword = "123456";
+        String passwordHash = passwordEncoder.encode(analystPassword);
+
+        UserEntity analyst = UserEntity.builder()
+                .name("Analista 1")
+                .email(analystEmail)
+                .passwordHash(passwordHash)
+                .role(Role.ANALYST)
+                .enabled(true)
+                .build();
+
+        userRepository.save(analyst);
+        log.info("✅ Analyst criado com sucesso!");
+        log.info("   Email: {}", analystEmail);
+        log.info("   Senha: {}", analystPassword);
+    }
+
+    private void createClientUsers() {
+        String[] clients = {
+                "João Silva,joao@email.com,123456",
+                "Maria Souza,maria@email.com,123456",
+                "Pedro Santos,pedro@email.com,123456"
+        };
+
+        for (String clientData : clients) {
+            String[] parts = clientData.split(",");
+            String name = parts[0];
+            String email = parts[1];
+            String password = parts[2];
+
+            if (userRepository.findByEmail(email).isPresent()) {
+                log.info("Cliente já existe: {}", email);
+                continue;
+            }
+
+            String passwordHash = passwordEncoder.encode(password);
+
+            UserEntity client = UserEntity.builder()
+                    .name(name)
+                    .email(email)
+                    .passwordHash(passwordHash)
+                    .role(Role.CLIENT)
+                    .enabled(true)
+                    .build();
+
+            userRepository.save(client);
+            log.info("✅ Cliente criado: {} / {}", email, password);
+        }
     }
 }
