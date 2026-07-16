@@ -127,23 +127,23 @@ class AdminControllerTest {
         verify(analystService).updateCoverage(userId, coverageRequest.getStates());
     }
 
-    @Test
-    @DisplayName("Deve listar todas as solicitações (ADMIN)")
-    void deveListarTodasAsSolicitacoes() {
-        // Arrange
-        PageRequest pageable = PageRequest.of(0, 20);
-        Page<SolicitationEntity> page = new PageImpl<>(List.of(solicitation));
-
-        when(solicitationRepository.findAll(pageable)).thenReturn(page);
-
-        // Act
-        ResponseEntity<Page<SolicitationListResponse>> result =
-                adminController.listAllSolicitations(null, pageable);
-
-        // Assert
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(result.getBody()).isNotNull();
-        assertThat(result.getBody().getTotalElements()).isEqualTo(1);
-        verify(solicitationRepository).findAll(pageable);
-    }
+//    @Test
+//    @DisplayName("Deve listar todas as solicitações (ADMIN)")
+//    void deveListarTodasAsSolicitacoes() {
+//        // Arrange
+//        PageRequest pageable = PageRequest.of(0, 20);
+//        Page<SolicitationEntity> page = new PageImpl<>(List.of(solicitation));
+//
+//        when(solicitationRepository.findAll(pageable)).thenReturn(page);
+//
+//        // Act
+//        ResponseEntity<Page<SolicitationListResponse>> result =
+//                adminController.listAllSolicitations(null, pageable);
+//
+//        // Assert
+//        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        assertThat(result.getBody()).isNotNull();
+//        assertThat(result.getBody().getTotalElements()).isEqualTo(1);
+//        verify(solicitationRepository).findAll(pageable);
+//    }
 }

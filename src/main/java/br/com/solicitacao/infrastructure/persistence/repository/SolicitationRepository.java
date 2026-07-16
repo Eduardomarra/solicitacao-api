@@ -15,9 +15,13 @@ public interface SolicitationRepository extends JpaRepository<SolicitationEntity
 
     Page<SolicitationEntity> findByClientId(UUID clientId, Pageable pageable);
 
+    Page<SolicitationEntity> findByClientIdAndStatus(UUID clientId, SolicitationStatus status, Pageable pageable);
+
     List<SolicitationEntity> findByClientIdAndStatus(UUID clientId, SolicitationStatus status);
 
     Page<SolicitationEntity> findByStatus(SolicitationStatus status, Pageable pageable);
+
+    Page<SolicitationEntity> findByState(String state, Pageable pageable);
 
     Page<SolicitationEntity> findByStateInAndStatus(List<String> states, SolicitationStatus status, Pageable pageable);
 
@@ -25,9 +29,6 @@ public interface SolicitationRepository extends JpaRepository<SolicitationEntity
 
     boolean existsByIdAndClientId(UUID id, UUID clientId);
 
-    // ============================================
-    // COUNT METHODS FOR DASHBOARD
-    // ============================================
-
+    // Count methods
     long countByStatus(SolicitationStatus status);
 }

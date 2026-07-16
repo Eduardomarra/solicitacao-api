@@ -1,8 +1,10 @@
-package br.com.solicitacao.api.dto.response;
+package br.com.solicitacao.api.dto.request;
 
 import br.com.solicitacao.core.domain.enums.Priority;
 import br.com.solicitacao.core.domain.enums.ServiceType;
-import br.com.solicitacao.core.domain.enums.SolicitationStatus;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,23 +12,20 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SolicitationResponse {
-    private UUID id;
-    private UUID clientId;
-    private String clientName;
-    private SolicitationStatus status;
-    private Integer currentStep;
+public class AdminUpdateSolicitationRequest {
 
     // Step 1
     private ServiceType serviceType;
+
+    @Size(min = 3, max = 80, message = "Título deve ter entre 3 e 80 caracteres")
     private String title;
+
+    @Size(min = 20, max = 1000, message = "Descrição deve ter entre 20 e 1000 caracteres")
     private String description;
 
     // Step 2
@@ -40,15 +39,15 @@ public class SolicitationResponse {
 
     // Step 3
     private Priority priority;
+
+    @FutureOrPresent(message = "Data preferencial não pode ser no passado")
     private LocalDate preferredDate;
+
+    @DecimalMin(value = "0.0", message = "Valor estimado deve ser maior ou igual a 0")
     private BigDecimal estimatedValue;
+
     private Boolean termsAccepted;
 
-    // Auditoria
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private LocalDateTime submittedAt;
-    private LocalDateTime analyzedAt;
-    private UUID analyzedBy;
-    private String analysisComment;
+    // Submeter diretamente?
+    private Boolean submitDirectly;
 }
