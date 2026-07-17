@@ -84,7 +84,7 @@ src/main/java/br/com/solicitacao/
 
 ````bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/solicitacao-api.git
+git clone https://github.com/eduardomarra/solicitacao-api.git
 cd solicitacao-api
 
 # Subir todos os serviços
