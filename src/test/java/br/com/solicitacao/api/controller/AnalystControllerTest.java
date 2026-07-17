@@ -252,4 +252,41 @@ class AnalystControllerTest {
 
         verify(analystService).listSolicitationsForAnalyst(eq(analystId), any(), eq(pageable));
     }
+
+    @Test
+    @DisplayName("Deve lançar exceção quando o usuário autenticado não for encontrado no banco")
+    void deveLancarExcecaoQuandoUsuarioAutenticadoNaoEncontrado() {
+        // Arrange
+        // Sobrescrevemos o mock do setUp para simular que o usuário não existe no banco
+        when(userRepository.findByEmail(email)).thenReturn(java.util.Optional.empty());
+
+        // Act & Assert
+        // Podemos testar chamando qualquer endpoint, já que todos usam o getCurrentUserId()
+        assertThatThrownBy(() -> analystController.getSolicitation(solicitationId))
+                .isInstanceOf(RuntimeException.class)
+                .hasMessage("User not found");
+
+        verify(userRepository).findByEmail(email);
+        verifyNoInteractions(analystService);
+    }
+
+    @Test
+    @DisplayName("Deve repassar exceção quando serviço falhar ao decidir solicitação")
+    void deveRepassarExcecaoAoDecidirSolicitacao() {
+        // Arrange
+        AnalystDecisionRequest request = AnalystDecisionRequest.builder()
+                .decision("APPROVE")
+                .comment("Comentário")
+                .build();
+
+        when(analystService.decide(solicitationId, analystId, request))
+                .thenThrow(new br.com.solicitacao.core.exception.BusinessException("Solicitação não está em revisão"));
+
+        // Act & Assert
+        assertThatThrownBy(() -> analystController.decide(solicitationId, request))
+                .isInstanceOf(br.com.solicitacao.core.exception.BusinessException.class)
+                .hasMessage("Solicitação não está em revisão");
+
+        verify(analystService).decide(solicitationId, analystId, request);
+    }
 }

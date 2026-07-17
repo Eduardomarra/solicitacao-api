@@ -15,6 +15,8 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import br.com.solicitacao.api.dto.request.CreateUserRequest;
+import br.com.solicitacao.core.domain.enums.Role;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
@@ -211,5 +213,32 @@ class AuthControllerTest {
                 .hasMessage("Email já cadastrado");
 
         verify(authService, times(1)).register(registerRequest);
+    }
+
+    @Test
+    @DisplayName("Deve criar usuário Admin/Analyst com sucesso via Controller")
+    void deveCriarUsuarioAdminOuAnalista() {
+        CreateUserRequest createRequest = CreateUserRequest.builder()
+                .name("Admin Teste")
+                .email("admin@teste.com")
+                .password("senha123")
+                .role(Role.ADMIN)
+                .build();
+
+        AuthResponse authResponse = AuthResponse.builder()
+                .accessToken("adminToken")
+                .email("admin@teste.com")
+                .role("ADMIN")
+                .build();
+
+        when(authService.createUser(createRequest)).thenReturn(authResponse);
+
+        ResponseEntity<AuthResponse> responseEntity = authController.createUser(createRequest);
+
+        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+        assertThat(responseEntity.getBody()).isNotNull();
+        assertThat(responseEntity.getBody().getEmail()).isEqualTo("admin@teste.com");
+        assertThat(responseEntity.getBody().getRole()).isEqualTo("ADMIN");
+        verify(authService, times(1)).createUser(createRequest);
     }
 }

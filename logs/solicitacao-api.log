@@ -11749,3 +11749,258 @@
 2026-07-16 17:52:47.152 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2026-07-16 17:52:47.153 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-07-16 17:52:47.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-17 14:38:29.636 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-07-17 14:38:29.688 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Starting SolicitacaoApplication using Java 21.0.11 with PID 19504 (C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api\target\classes started by eduardo.gomes in C:\Users\eduardo.gomes\Desktop\Eduardo\solicitacao-api)
+2026-07-17 14:38:29.689 [restartedMain] DEBUG b.c.s.SolicitacaoApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-07-17 14:38:29.689 [restartedMain] INFO  b.c.s.SolicitacaoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-17 14:38:29.753 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-17 14:38:29.753 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-17 14:38:30.834 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-17 14:38:30.834 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-17 14:38:30.901 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2026-07-17 14:38:31.603 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=22650c78-7dbe-3491-90e9-a39e54d78706
+2026-07-17 14:38:32.487 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-17 14:38:32.494 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-17 14:38:32.496 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-17 14:38:32.496 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-07-17 14:38:32.575 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-07-17 14:38:32.576 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2822 ms
+2026-07-17 14:38:32.742 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-17 14:38:32.951 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:solicitacao_db user=SA
+2026-07-17 14:38:32.953 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-17 14:38:32.962 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:solicitacao_db'
+2026-07-17 14:38:33.190 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-17 14:38:33.267 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-07-17 14:38:33.309 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-17 14:38:33.574 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-17 14:38:33.631 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-17 14:38:34.539 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-17 14:38:34.555 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-17 14:38:34.560 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-17 14:38:34.560 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-17 14:38:34.560 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-17 14:38:34.565 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table analyst_coverage (
+        state varchar(2) not null,
+        id uuid not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2026-07-17 14:38:34.570 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table audit_logs (
+        success boolean not null,
+        created_at timestamp(6),
+        duration_ms bigint,
+        id uuid not null,
+        user_id uuid not null,
+        user_role varchar(20) not null,
+        action varchar(100) not null,
+        entity_id varchar(100),
+        error_message TEXT,
+        primary key (id)
+    )
+2026-07-17 14:38:34.571 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table solicitations (
+        current_step integer not null,
+        estimated_value numeric(15,2),
+        preferred_date date,
+        state varchar(2),
+        terms_accepted boolean,
+        analyzed_at timestamp(6),
+        cep varchar(8),
+        created_at timestamp(6),
+        submitted_at timestamp(6),
+        updated_at timestamp(6),
+        priority varchar(10) check (priority in ('LOW','MEDIUM','HIGH')),
+        analyzed_by uuid,
+        client_id uuid not null,
+        id uuid not null,
+        number varchar(20),
+        service_type varchar(20) check (service_type in ('INSTALLATION','MAINTENANCE','INSPECTION')),
+        status varchar(20) not null check (status in ('DRAFT','SUBMITTED','IN_REVIEW','APPROVED','REJECTED')),
+        title varchar(80),
+        city varchar(100),
+        complement varchar(100),
+        neighborhood varchar(100),
+        analysis_comment varchar(1000),
+        description varchar(1000),
+        street varchar(255),
+        primary key (id)
+    )
+2026-07-17 14:38:34.578 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        enabled boolean not null,
+        created_at timestamp(6),
+        id uuid not null,
+        role varchar(20) not null check (role in ('CLIENT','ANALYST','ADMIN')),
+        email varchar(100) not null unique,
+        name varchar(100) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-07-17 14:38:34.583 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-17 14:38:35.033 [restartedMain] DEBUG b.c.s.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-17 14:38:35.609 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2026-07-17 14:38:35.682 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-17 14:38:35.730 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-07-17 14:38:36.381 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@300f257b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b936fa, org.springframework.security.web.context.SecurityContextHolderFilter@27b812fe, org.springframework.security.web.header.HeaderWriterFilter@2537bbaf, org.springframework.web.filter.CorsFilter@61052a0b, org.springframework.security.web.authentication.logout.LogoutFilter@6a5246e7, br.com.solicitacao.infrastructure.config.JwtAuthenticationFilter@4a5e54cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@148345d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f9a838e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6581904b, org.springframework.security.web.session.SessionManagementFilter@6f968c47, org.springframework.security.web.access.ExceptionTranslationFilter@10f99ef8, org.springframework.security.web.access.intercept.AuthorizationFilter@4cab5ebf]
+2026-07-17 14:38:37.708 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-17 14:38:37.722 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-07-17 14:38:37.738 [restartedMain] INFO  b.c.s.SolicitacaoApplication - Started SolicitacaoApplication in 8.666 seconds (process running for 9.535)
+2026-07-17 14:38:37.818 [restartedMain] INFO  b.c.s.i.config.DataInitializer - === INICIALIZANDO DADOS ===
+2026-07-17 14:38:37.967 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-17 14:38:38.074 [restartedMain] INFO  b.c.s.i.config.DataInitializer - Hash gerado para admin: $2a$10$tAjouf.S5BYA8qqDWJTE.eokxXe1utXVG0Tfiw84C0Kdoo9ufLyVm
+2026-07-17 14:38:38.139 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-17 14:38:38.148 [restartedMain] INFO  b.c.s.i.config.DataInitializer - ✅ Admin criado com sucesso!
+2026-07-17 14:38:38.148 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Email: admin@email.com
+2026-07-17 14:38:38.148 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Senha: admin123
+2026-07-17 14:38:38.151 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-17 14:38:38.228 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-17 14:38:38.230 [restartedMain] INFO  b.c.s.i.config.DataInitializer - ✅ Analyst criado com sucesso!
+2026-07-17 14:38:38.230 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Email: analyst@email.com
+2026-07-17 14:38:38.230 [restartedMain] INFO  b.c.s.i.config.DataInitializer -    Senha: 123456
+2026-07-17 14:38:38.231 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-17 14:38:38.306 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-17 14:38:38.307 [restartedMain] INFO  b.c.s.i.config.DataInitializer - ✅ Cliente criado: joao@email.com / 123456
+2026-07-17 14:38:38.308 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-17 14:38:38.381 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-17 14:38:38.382 [restartedMain] INFO  b.c.s.i.config.DataInitializer - ✅ Cliente criado: maria@email.com / 123456
+2026-07-17 14:38:38.383 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.enabled,
+        ue1_0.name,
+        ue1_0.password_hash,
+        ue1_0.role 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2026-07-17 14:38:38.458 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at, email, enabled, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-07-17 14:38:38.459 [restartedMain] INFO  b.c.s.i.config.DataInitializer - ✅ Cliente criado: pedro@email.com / 123456
+2026-07-17 14:38:38.460 [restartedMain] INFO  b.c.s.i.config.DataInitializer - === DADOS INICIALIZADOS COM SUCESSO ===
+2026-07-17 14:39:03.455 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-17 14:39:03.455 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-17 14:39:03.457 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-17 14:39:03.840 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-07-17 14:39:03.943 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:03.945 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/swagger-ui/index.html' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-07-17 14:39:04.048 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-07-17 14:39:04.330 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2026-07-17 14:39:04.333 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2026-07-17 14:39:04.336 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-07-17 14:39:04.337 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-07-17 14:39:04.339 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.339 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.340 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.339 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.364 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-07-17 14:39:04.370 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-07-17 14:39:04.372 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2026-07-17 14:39:04.376 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.369 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-07-17 14:39:04.390 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2026-07-17 14:39:04.396 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-07-17 14:39:04.829 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-07-17 14:39:04.829 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.846 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-07-17 14:39:04.889 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-07-17 14:39:04.891 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-07-17 14:39:04.896 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-07-17 14:39:06.059 [http-nio-8080-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1145 ms
+2026-07-17 14:39:57.780 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-17 14:39:57.781 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists analyst_coverage cascade 
+2026-07-17 14:39:57.783 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists audit_logs cascade 
+2026-07-17 14:39:57.783 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists solicitations cascade 
+2026-07-17 14:39:57.784 [SpringApplicationShutdownHook] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade 
+2026-07-17 14:39:57.786 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-07-17 14:39:57.788 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-17 14:39:57.790 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -42,7 +42,6 @@ class SolicitationServiceTest {
     @Mock
     private ElasticsearchService elasticsearchService;
 
-    @InjectMocks
     private SolicitationService solicitationService;
 
     private UUID clientId;
@@ -60,6 +59,12 @@ class SolicitationServiceTest {
                 .status(SolicitationStatus.DRAFT)
                 .currentStep(0)
                 .build();
+
+        solicitationService = new SolicitationService(
+                solicitationRepository,
+                viaCepClient,
+                Optional.of(elasticsearchService)
+        );
     }
 
     // ========== TESTES STEP 1 ==========
@@ -136,7 +141,7 @@ class SolicitationServiceTest {
         // Act & Assert
         assertThatThrownBy(() -> solicitationService.saveStep1(solicitationId, clientId, request))
                 .isInstanceOf(BusinessException.class)
-                .hasMessageContaining("Não é possível editar uma solicitação que já foi enviada");
+                .hasMessageContaining("Cannot edit a solicitation that has already been submitted");
     }
 
     // ========== TESTES STEP 2 ==========
@@ -202,7 +207,7 @@ class SolicitationServiceTest {
         // Act & Assert
         assertThatThrownBy(() -> solicitationService.saveStep2(solicitationId, clientId, request))
                 .isInstanceOf(BusinessException.class)
-                .hasMessageContaining("CEP inválido ou não encontrado");
+                .hasMessageContaining("Invalid CEP or not found");
     }
 
     @Test
@@ -260,7 +265,7 @@ class SolicitationServiceTest {
         // Act & Assert
         assertThatThrownBy(() -> solicitationService.saveStep2(solicitationId, clientId, request))
                 .isInstanceOf(BusinessException.class)
-                .hasMessageContaining("Não é possível editar uma solicitação que já foi enviada");
+                .hasMessageContaining("Cannot edit a solicitation that has already been submitted");
     }
 
     // ========== TESTES STEP 3 ==========
@@ -309,7 +314,7 @@ class SolicitationServiceTest {
         // Act & Assert
         assertThatThrownBy(() -> solicitationService.saveStep3(solicitationId, clientId, request))
                 .isInstanceOf(BusinessException.class)
-                .hasMessageContaining("Para prioridade HIGH, o valor estimado deve ser >= 100");
+                .hasMessageContaining("For HIGH priority, estimated value must be >= 100");
     }
 
     @Test
@@ -346,7 +351,7 @@ class SolicitationServiceTest {
         // Act & Assert
         assertThatThrownBy(() -> solicitationService.saveStep3(solicitationId, clientId, request))
                 .isInstanceOf(BusinessException.class)
-                .hasMessageContaining("Não é possível editar uma solicitação que já foi enviada");
+                .hasMessageContaining("Cannot edit a solicitation that has already been submitted");
     }
 
     // ========== TESTES DE SUBMIT ==========
@@ -409,6 +414,19 @@ class SolicitationServiceTest {
         // Act & Assert
         assertThatThrownBy(() -> solicitationService.submit(solicitationId, clientId))
                 .isInstanceOf(BusinessException.class)
-                .hasMessageContaining("Step 2 incompleto");
+                .hasMessageContaining("Address is not fully filled");
+    }
+
+    @Test
+    @DisplayName("Deve criar nova solicitação em rascunho")
+    void deveCriarNovaSolicitacaoEmRascunho() {
+        when(solicitationRepository.save(any(SolicitationEntity.class))).thenReturn(solicitation);
+
+        SolicitationEntity result = solicitationService.create(clientId);
+
+        assertThat(result.getClientId()).isEqualTo(clientId);
+        assertThat(result.getStatus()).isEqualTo(SolicitationStatus.DRAFT);
+        assertThat(result.getCurrentStep()).isEqualTo(0);
+        verify(solicitationRepository).save(any(SolicitationEntity.class));
     }
 }

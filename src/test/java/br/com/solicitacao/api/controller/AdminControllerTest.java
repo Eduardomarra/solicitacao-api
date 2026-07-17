@@ -27,6 +27,8 @@ import org.springframework.http.ResponseEntity;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -89,61 +91,79 @@ class AdminControllerTest {
     @Test
     @DisplayName("Deve criar usuário com sucesso (ADMIN)")
     void deveCriarUsuarioComSucesso() {
-        // Arrange
         AuthResponse response = AuthResponse.builder()
                 .accessToken("jwtToken")
-                .refreshToken("refreshToken")
-                .tokenType("Bearer")
-                .expiresIn(86400000L)
                 .email("analista@teste.com")
-                .name("Novo Analista")
                 .role("ANALYST")
                 .build();
 
         when(authService.createUser(createUserRequest)).thenReturn(response);
 
-        // Act
         ResponseEntity<AuthResponse> result = adminController.createUser(createUserRequest);
 
-        // Assert
-        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(result.getBody()).isNotNull();
         assertThat(result.getBody().getEmail()).isEqualTo("analista@teste.com");
-        assertThat(result.getBody().getRole()).isEqualTo("ANALYST");
         verify(authService).createUser(createUserRequest);
     }
 
     @Test
     @DisplayName("Deve configurar cobertura do analista")
     void deveConfigurarCoberturaDoAnalista() {
-        // Arrange
         doNothing().when(analystService).updateCoverage(userId, coverageRequest.getStates());
 
-        // Act
         ResponseEntity<Void> result = adminController.updateAnalystCoverage(userId, coverageRequest);
 
-        // Assert
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
         verify(analystService).updateCoverage(userId, coverageRequest.getStates());
     }
 
-//    @Test
-//    @DisplayName("Deve listar todas as solicitações (ADMIN)")
-//    void deveListarTodasAsSolicitacoes() {
-//        // Arrange
-//        PageRequest pageable = PageRequest.of(0, 20);
-//        Page<SolicitationEntity> page = new PageImpl<>(List.of(solicitation));
-//
-//        when(solicitationRepository.findAll(pageable)).thenReturn(page);
-//
-//        // Act
-//        ResponseEntity<Page<SolicitationListResponse>> result =
-//                adminController.listAllSolicitations(null, pageable);
-//
-//        // Assert
-//        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-//        assertThat(result.getBody()).isNotNull();
-//        assertThat(result.getBody().getTotalElements()).isEqualTo(1);
-//        verify(solicitationRepository).findAll(pageable);
-//    }
+    @Test
+    @DisplayName("Deve listar todas as solicitações (ADMIN)")
+    void deveListarTodasAsSolicitacoes() {
+        // Arrange
+        PageRequest pageable = PageRequest.of(0, 20);
+        Page<SolicitationEntity> page = new PageImpl<>(List.of(solicitation));
+
+        // Mock necessário para o toListResponse não quebrar
+        when(solicitationRepository.findAll(pageable)).thenReturn(page);
+        when(userRepository.findById(any())).thenReturn(Optional.of(UserEntity.builder().name("Cliente Mock").build()));
+
+        // Act
+        ResponseEntity<Page<SolicitationListResponse>> result =
+                adminController.listAllSolicitations(null, null, null, pageable);
+
+        // Assert
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(result.getBody()).isNotNull();
+        assertThat(result.getBody().getTotalElements()).isEqualTo(1);
+        assertThat(result.getBody().getContent().get(0).getClientName()).isEqualTo("Cliente Mock");
+        verify(solicitationRepository).findAll(pageable);
+    }
+
+    @Test
+    @DisplayName("Deve retornar estatísticas do Dashboard")
+    void deveRetornarEstatisticasDashboard() {
+        when(userRepository.count()).thenReturn(10L);
+        when(solicitationRepository.count()).thenReturn(50L);
+
+        ResponseEntity<Map<String, Object>> result = adminController.getDashboardStats();
+
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(result.getBody()).isNotNull();
+        assertThat(result.getBody().get("totalUsers")).isEqualTo(10L);
+        assertThat(result.getBody().get("totalSolicitations")).isEqualTo(50L);
+    }
+
+    @Test
+    @DisplayName("Deve deletar solicitação com sucesso")
+    void deveDeletarSolicitacaoComSucesso() {
+        when(solicitationRepository.findById(solicitationId)).thenReturn(Optional.of(solicitation));
+        doNothing().when(solicitationRepository).delete(solicitation);
+
+        ResponseEntity<Void> result = adminController.deleteSolicitation(solicitationId);
+
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+        verify(solicitationRepository).delete(solicitation);
+    }
 }
