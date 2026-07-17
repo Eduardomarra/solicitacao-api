@@ -6,6 +6,22 @@ API REST para gerenciamento de solicitações de atendimento com fluxo multi-ste
 
 ---
 
+## 🎯 Status do Projeto
+
+| Módulo                  | Status      |
+|-------------------------|-------------|
+| Autenticação JWT        | ✅ Concluído |
+| Multi-Step Solicitation | ✅ Concluído |
+| Análise (ANALYST)       | ✅ Concluído |
+| Administração (ADMIN)   | ✅ Concluído |
+| Auditoria (AOP)         | ✅ Concluído |
+| Elasticsearch           | ✅ Concluído |
+| Testes                  | ✅ Concluído |
+| Documentação            | ✅ Concluído |
+| Collection Postman      | ✅ Concluído |
+
+---
+
 ## 🚀 Tecnologias
 
 | Tecnologia | Versão | Descrição |
@@ -297,18 +313,3 @@ MIT License
 
 Email: eduardomarra@gmail.com\
 GitHub: https://github.com/Eduardomarra
-
-*** 
-
-## 🎯 Status do Projeto
-
-| Módulo                  | Status          |
-|-------------------------|-----------------|
-| Autenticação JWT        | ✅ Concluído     |
-| Multi-Step Solicitation | ✅ Concluído     |
-| Análise (ANALYST)       | ✅ Concluído     |
-| Administração (ADMIN)   | ✅ Concluído     |
-| Auditoria (AOP)         | ✅ Concluído     |
-| Elasticsearch           | ✅ Concluído     |
-| Testes                  | 🟡 Em andamento |
-| Documentação            | ✅ Concluído     |
